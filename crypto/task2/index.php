@@ -1,12 +1,10 @@
 <?php
 if(isset($_REQUEST['submit'])){
 	$string = $_REQUEST['pass'];
+	$key = "thisisadumbassquestion";
+	$len = strlen($key);
 	for($i=0;$i<strlen($string);$i++){
-		if($i&1){
-			$string[$i]+=$i;
-		} else {
-			$string[$i]-=$i;
-		}
+			$string[$i] ^= $key[$i%$len];
 	}
 }
 ?>
@@ -15,9 +13,9 @@ if(isset($_REQUEST['submit'])){
 		<title></title>
 	</head>
 	<body>
-		<center>crypto task1</center>
-		<p>You seem to have found the encrypted password of derp and he uses his own encrypting algorithm.
-			You have access to the machine that encrypts the password</p>
+		<center>crypto task2</center>
+		<p>DERP now has changed the encryption algorithm and it uses a onetime pad to encrypt the password. 
+			You have found the encrypted password. You have access to the machine that encrypts the password</p>
 		<p>Derps encrypted password is asdfasdfafsdf. His password is the answer for this level</p>
 		<form>
 			<input type="text" name="pass"/>
