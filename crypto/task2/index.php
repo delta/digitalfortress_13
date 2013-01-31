@@ -14,9 +14,9 @@ if(isset($_REQUEST['submit'])){
 	</head>
 	<body>
 		<center>crypto task2</center>
-		<p>DERP now has changed the encryption algorithm and it uses a onetime pad to encrypt the password. 
+		<p>DERP now has changed the encryption algorithm and it uses onetime pad encryption to encrypt the password. 
 			You have found the encrypted password. You have access to the machine that encrypts the password</p>
-		<p>Derps encrypted password is asdfasdfafsdf. His password is the answer for this level</p>
+		<p>Derps encrypted password is "andanoobpassword"(quotes for clarity). The key concatenated with the password is the answer for this level</p>
 		<form>
 			<input type="text" name="pass"/>
 			<input type="submit" name="submit" value="submit"/>

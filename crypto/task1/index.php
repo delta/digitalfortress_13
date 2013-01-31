@@ -18,7 +18,7 @@ if(isset($_REQUEST['submit'])){
 		<center>crypto task1</center>
 		<p>You seem to have found the encrypted password of derp and he uses his own encrypting algorithm.
 			You have access to the machine that encrypts the password</p>
-		<p>Derps encrypted password is asdfasdfafsdf. His password is the answer for this level</p>
+		<p>Derps encrypted password is "asdfasdfafsdf"(quotes for clarity). His password is the answer for this level</p>
 		<form>
 			<input type="text" name="pass"/>
 			<input type="submit" name="submit" value="submit"/>
