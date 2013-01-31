@@ -3,9 +3,9 @@ if(isset($_REQUEST['submit'])){
 	$connection = mysql_connect("server","user","password");
 	mysql_select_db($database_name);
 	
-	$query = "SELECT * FROM `task1` WHERE `password` LIKE ";
+	$query = "SELECT * FROM `task1` WHERE `user`={} AND `password` ";
 	$result = mysql_query($query);
-	if(mysql_fetch_array($result)){
+	if(mysql_affected_rows($result)){
 		
 	}
 }
