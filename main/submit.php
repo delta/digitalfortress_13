@@ -31,7 +31,7 @@ if(isset($_REQUEST['submit'])){
 				<option value="1">crypto</option>
 				<option value="2">web</option>
 				<option value="3">reverse engineer</option>
-				<option value="4"></option>
+				<option value="4">trivia</option>
 				<option value="5"></option>
 			</select>
 			<label for="task">Select a task</label>
