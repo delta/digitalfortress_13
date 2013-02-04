@@ -4,7 +4,7 @@ if(isset($_REQUEST['submit'])){
 		if($_REQUEST['category']<=5 && $_REQUEST['category']>0 && $_REQUEST['task']<=5 && $_REQUEST['task']>0){
 			$cat = htmlentities($_REQUEST['category'],ENT_QUOTES);
 			$task = htmlentities($_REQUEST['task'],ENT_QUOTES);
-			$ans = htmlentities($_REQUEST['ans'],ENT_QUOTES);
+			$ans = md5(htmlentities($_REQUEST['ans'],ENT_QUOTES));
 			
 			mysql_connect("host","user","passwd");
 			mysql_select_db("db");
