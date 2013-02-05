@@ -11,9 +11,19 @@ if(isset($_REQUEST['submit'])){
 			
 			$query = "SELECT * FROM `ans` where `category`={$cat} AND `task`={$task} AND 'ans'={$ans}";
 			$result = mysql_query($query);
-			
+			$score_table="";
 			if(mysql_affected_rows($result)){
 				//update users table
+				$query ="SELECT * {$user_table} WHERE `user_name` = {$username} ";
+				$res   = mysql_query($query);
+				while($row   = mysql_fetch_assoc($res))
+				$team=$res['team_name'];
+				$query ="SELECT * {$score_table} WHERE `team_name` = {$team} ";
+				$res   = mysql_query($query);
+				while($row   = mysql_fetch_assoc($res))
+				$score=intval($row['score']);
+				$score+=$scorearray[''+$cat+substr($task,4)];
+				$query="UPDATE {$score_table} SET `score` = {$score} WHERE `team_name` = {$team} ";
 			}
 		}
 	}
