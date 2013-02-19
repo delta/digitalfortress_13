@@ -14,6 +14,19 @@ print_r($_GET);
 
 $req_path = $_GET['query'];
 
-
+$routes = array("web/task1"=>"/pages/web/task1/index.php",
+				"web/task2"=>"/pages/web/task1/index.php",
+				"web/task3"=>"/pages/web/task1/index.php",
+				"web/task4"=>"/pages/web/task1/index.php",
+				"web/task5"=>"/pages/web/task1/index.php",
+				"crypto/task1"=>"/pages/crypto/task1/index.php",
+				"crypto/task2"=>"/pages/crypto/task1/index.php",
+				"crypto/task3"=>"/pages/crypto/task1/index.php",
+				"crypto/task4"=>"/pages/crypto/task1/index.php",
+				"crypto/task5"=>"/pages/crypto/task1/index.php",
+				"stats"=>"/pages/main/stats.php",
+				"dashboard"=>"/pages/main/dashboard.php",
+				"submit"=>"/pages/main/submit.php");
+				
 
 ?>

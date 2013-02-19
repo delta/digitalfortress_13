@@ -6,7 +6,8 @@ if( $testing || isset($_REQUEST['submit'])){
 			$cat = htmlentities($_REQUEST['category'],ENT_QUOTES);
 			$task = htmlentities($_REQUEST['task'],ENT_QUOTES);
 			$ans = md5(htmlentities($_REQUEST['ans'],ENT_QUOTES));
-include "config.php";
+
+			include "config.php";
 			mysql_connect($host,$user,$pass);
 			mysql_select_db($db);
 //Test
