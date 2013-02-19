@@ -1,5 +1,6 @@
 RewriteEngine On
 
-RewriteBase /
-RewriteRule ^index\.php$ /digitalfortress/
-RewriteRule . ./digitalfortress/index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([A-z-/&=0-9]*)\??([A-z&=0-9]*)? index.php?query=$1$2
