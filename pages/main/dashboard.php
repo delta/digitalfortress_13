@@ -15,14 +15,14 @@
 	$query="SELECT * FROM `$user_table` WHERE `user_name` = '$user' LIMIT 1";
 	$result=mysql_query($query);
 	$row=mysql_fetch_assoc($result);
-	$team=$row['team'];
-	echo $team;
+	$handle=$row['handle'];
+//	echo $team;
 
 	$c=0;
 	foreach($categories as $cat){
 		echo "<br /><br />$cat:<br />";
 		$c++;
-		$query="SELECT * FROM `$score_table` WHERE `category`='$c' && `team`='$team' ";
+		$query="SELECT * FROM `$score_table` WHERE `category`='$c' && `handle`='$handle' ";
 		$res=mysql_query($query);
 		$done=array();
 		while($tasks=mysql_fetch_assoc($res)){
