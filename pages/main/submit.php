@@ -1,30 +1,35 @@
 <?php
-if(isset($_REQUEST['submit'])){
-	if(isset($_REQUEST['category']) && isset($_REQUEST['task'])){
-		if($_REQUEST['category']<=5 && $_REQUEST['category']>0 && $_REQUEST['task']<=5 && $_REQUEST['task']>0){
+$testing=0;
+if( $testing || isset($_REQUEST['submit'])){
+	if( $testing || isset($_REQUEST['category']) && isset($_REQUEST['task'])){
+		if($testing || $_REQUEST['category']<=5 && $_REQUEST['category']>0 && $_REQUEST['task']<=5 && $_REQUEST['task']>0){
 			$cat = htmlentities($_REQUEST['category'],ENT_QUOTES);
 			$task = htmlentities($_REQUEST['task'],ENT_QUOTES);
 			$ans = md5(htmlentities($_REQUEST['ans'],ENT_QUOTES));
-			
-			mysql_connect("host","user","passwd");
-			mysql_select_db("db");
-			
-			$query = "SELECT * FROM `ans` where `category`={$cat} AND `task`={$task} AND 'ans'={$ans}";
+include "config.php";
+			mysql_connect($host,$user,$pass);
+			mysql_select_db($db);
+//Test
+/*
+$cat="web";
+$task="task1";
+$ans=md5("hello");
+$username="test";
+*/		
+			$query = "SELECT * FROM `$ans_table` where `category`='{$cat}' AND `task`='".substr($task,4)."' AND `ans`='{$ans}'";
 			$result = mysql_query($query);
-			$score_table="";
-			if(mysql_affected_rows($result)){
+//echo $query.'<br />';
+			if(mysql_num_rows($result)>0){
 				//update users table
-				$query ="SELECT * {$user_table} WHERE `user_name` = {$username} ";
+				$query ="SELECT * FROM `{$user_table}` WHERE `user_name` = '{$username}' LIMIT 1";
 				$res   = mysql_query($query);
-				while($row   = mysql_fetch_assoc($res))
-				$team=$res['team_name'];
-				$query ="SELECT * {$score_table} WHERE `team_name` = {$team} ";
-				$res   = mysql_query($query);
-				while($row   = mysql_fetch_assoc($res))
-				$score=intval($row['score']);
-				$score+=$scorearray[''+$cat+substr($task,4)];
-				$query="UPDATE {$score_table} SET `score` = {$score} WHERE `team_name` = {$team} ";
+				$row   = mysql_fetch_assoc($res);
+				$team=$row['team'];
+			$query = "INSERT IGNORE INTO `{$score_table}` VALUES('$team','".substr($task,4)."','$cat')";
+			$result = mysql_query($query) or die("Error updating score.Contact admin");
+			echo "<br /><h3>User : $username <br />Team : $team<br />Task : $cat $task <br /> Submitted Successfully</h3>";
 			}
+			
 		}
 	}
 }
