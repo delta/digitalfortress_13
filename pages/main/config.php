@@ -12,10 +12,5 @@
 					array(10,20,30,40),
 					array(10,20,30,40)
 				     );
-			$l=1;
-			foreach($categories as $c)
-			{
-			$catid["$c"]=$l++;
-			}
 			session_start();
 ?>

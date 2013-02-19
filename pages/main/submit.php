@@ -6,31 +6,30 @@ if( $testing || isset($_REQUEST['submit'])){
 			$cat = htmlentities($_REQUEST['category'],ENT_QUOTES);
 			$task = htmlentities($_REQUEST['task'],ENT_QUOTES);
 			$ans = md5(htmlentities($_REQUEST['ans'],ENT_QUOTES));
-include "config.php";
+
+			include "config.php";
 			mysql_connect($host,$user,$pass);
 			mysql_select_db($db);
 //Test
-/*
+
 $cat="web";
-$task="task3";
+$task="task1";
 $ans=md5("hello");
-$handle="testhandle";
-*/		
+$username="test";
+		
 			$query = "SELECT * FROM `$ans_table` where `category`='{$cat}' AND `task`='".substr($task,4)."' AND `ans`='{$ans}'";
 			$result = mysql_query($query);
 //echo $query.'<br />';
 			if(mysql_num_rows($result)>0){
 				//update users table
-				$query ="SELECT * FROM `{$user_table}` WHERE `handle` = '{$handle}' LIMIT 1";
+				$query ="SELECT * FROM `{$user_table}` WHERE `user_name` = '{$username}' LIMIT 1";
 				$res   = mysql_query($query);
 				$row   = mysql_fetch_assoc($res);
-				//$team=$row['team'];
-				$handle=$row['handle'];
-			$query = "INSERT IGNORE INTO `{$score_table}` VALUES('$handle','".substr($task,4)."','".$catid[$cat]."')";
+				$team=$row['team'];
+			$query = "INSERT IGNORE INTO `{$score_table}` VALUES('$team','".substr($task,4)."','$cat')";
 			$result = mysql_query($query) or die("Error updating score.Contact admin");
-			echo "<br /><h3>Handle : $handle <br /><br />Task : $cat $task <br /> Submitted Successfully</h3>";
+			echo "<br /><h3>User : $username <br />Team : $team<br />Task : $cat $task <br /> Submitted Successfully</h3>";
 			}
-			else echo "<br /> Wrong answer for $cat $task ";
 			
 		}
 	}

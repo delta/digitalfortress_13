@@ -28,5 +28,10 @@ $routes = array("web/task1"=>"/pages/web/task1/index.php",
 				"dashboard"=>"/pages/main/dashboard.php",
 				"submit"=>"/pages/main/submit.php");
 				
-
+if($req_path=="" || empty($req_path)){
+	require_once '';
+}			
+if(file_exists(__DIR__."/../".$routes[$req_path])){
+	require_once __DIR__."/../".$routes[$req_path]; 
+}
 ?>
