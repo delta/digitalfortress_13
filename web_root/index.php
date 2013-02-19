@@ -12,6 +12,8 @@
 echo "HOST : ".$_SERVER['HTTP_HOST']."  SELF: ".$_SERVER['PHP_SELF'];
 print_r($_GET);
 
+$req_path = $_GET['query'];
+
 
 
 ?>
