@@ -12,23 +12,25 @@ include "config.php";
 //Test
 /*
 $cat="web";
-$task="task1";
+$task="task3";
 $ans=md5("hello");
-$username="test";
+$handle="testhandle";
 */		
 			$query = "SELECT * FROM `$ans_table` where `category`='{$cat}' AND `task`='".substr($task,4)."' AND `ans`='{$ans}'";
 			$result = mysql_query($query);
 //echo $query.'<br />';
 			if(mysql_num_rows($result)>0){
 				//update users table
-				$query ="SELECT * FROM `{$user_table}` WHERE `user_name` = '{$username}' LIMIT 1";
+				$query ="SELECT * FROM `{$user_table}` WHERE `handle` = '{$handle}' LIMIT 1";
 				$res   = mysql_query($query);
 				$row   = mysql_fetch_assoc($res);
-				$team=$row['team'];
-			$query = "INSERT IGNORE INTO `{$score_table}` VALUES('$team','".substr($task,4)."','$cat')";
+				//$team=$row['team'];
+				$handle=$row['handle'];
+			$query = "INSERT IGNORE INTO `{$score_table}` VALUES('$handle','".substr($task,4)."','".$catid[$cat]."')";
 			$result = mysql_query($query) or die("Error updating score.Contact admin");
-			echo "<br /><h3>User : $username <br />Team : $team<br />Task : $cat $task <br /> Submitted Successfully</h3>";
+			echo "<br /><h3>Handle : $handle <br /><br />Task : $cat $task <br /> Submitted Successfully</h3>";
 			}
+			else echo "<br /> Wrong answer for $cat $task ";
 			
 		}
 	}
