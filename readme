@@ -1,0 +1,30 @@
+For now v'll do the questions.. 
+I have just put up some questions(incomplete).. 
+if you want to frame a question just make sure it is tougher than the rest of the questions.
+
+
+Copy the following to your vhost file and add an entry to ur hosts file and setup vhost and start working..
+N please update d sql dump if you change anything..
+
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	ServerName digitalfortress
+
+	DocumentRoot /var/www/digitalfortress/web_root/
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/digitalfortress/web_root/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
