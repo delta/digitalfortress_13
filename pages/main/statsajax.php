@@ -23,19 +23,20 @@ padding:5px 10px;
 $c=0;
 $score_by_name=array();
 $score_by_value=array();
-$query="SELECT DISTINCT  `team` FROM  `users`";
+$query="SELECT DISTINCT `handle` FROM  `users`";
 $result=mysql_query($query);
 echo mysql_error();
 while($row=mysql_fetch_assoc($result))
 {
-$team=$row['team'];
+$handle=$row['handle'];
 $score=0;
 $c=0;
 foreach($categories as $cat)
 {
 $c++;
-$query="SELECT * FROM `$score_table` WHERE `category`='$c' && `team`='$team' ";
+$query="SELECT * FROM `$score_table` WHERE `category`='$c' && `handle`='$handle' ";
 $res=mysql_query($query);
+//echo $query;
 $d=0;
 while($tasks=mysql_fetch_assoc($res))
 {
@@ -43,9 +44,9 @@ $score+=$scores[$c-1][$tasks['task_id']-1];
 $d++;
 }
 }
-$temp[]=array("name"=>"$team","score"=>"$score");
-$score_by_name["$team"]="$score";
-$score_by_value["$score"]="$team";
+$temp[]=array("name"=>"$handle","score"=>"$score");
+$score_by_name["$handle"]="$score";
+$score_by_value["$score"]="$handle";
 if(!isset($_GET['sort'])||$_GET['sort']=='name')
 $next='score';
 else 
@@ -64,8 +65,8 @@ document.getElementById("sorter").submit();
 </form>
 <table id='score_table' border=5 > 
 <thead>
-<th width='300' onclick="sortfunc('name')" id='team_name' ><button  >Team</button></th>
-<th width='300' onclick="sortfunc('score')" id='team_name' ><button  >Score</button></th>
+<th width='300' onclick="sortfunc('name')" id='handle' ><button  >Handle</button></th>
+<th width='300' onclick="sortfunc('score')" id='handle' ><button  >Score</button></th>
 </thead>
 ABC;
 echo $html;
@@ -87,7 +88,7 @@ foreach($temp as $key=>$value)
 {
 echo "<tr>";
 echo "<td id='team_name'>{$value['name']}</td>";
-echo "<td id='team_score'>{$value['score'}</td>";
+echo "<td id='team_score'>{$value['score']}</td>";
 echo "</tr>";
 }
 

@@ -1,11 +1,43 @@
-Digital fortress
- ____  _        _  _          _
-|  _ \(_) __ _ (_)| |_  __ _ | |
-| | \ | |/ _' || || __|/ _' || |
-| |_/ | | (_| || || |_( (_| || |
-|____/|_|\__. ||_|\___|\__._||_|
-          / | |
-         / (| |
-         \____/
-         
-some one please do fortress
+<html>
+	<head>
+		<title>Digital Fortress</title>
+		<style type="text/css">
+			body{
+				margin:auto;
+				width: 1040px;
+				color: #fff;
+				background: #000;
+			}
+			
+			#maintitle{
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="maintitle">
+			<pre>
+                                    __           _                     
+ ____  _        _  _          _    / _|         | |                    
+|  _ \(_) __ _ (_)| |_  __ _ | |  | |_ ___  _ __| |_ _ __ ___  ___ ___ 
+| | \ | |/ _' || || __|/ _' || |  |  _/ _ \| '__| __| '__/ _ \/ __/ __|
+| |_/ | | (_| || || |_( (_| || |  | || (_) | |  | |_| | |  __/\__ \__ \
+|____/|_|\__. ||_|\___|\__._||_|  |_| \___/|_|   \__|_|  \___||___/___/
+          / | |			                                       
+         / (| |			                                       
+         \____/                                                        
+
+			</pre>                                                                                  
+		</div>
+		<div id="content">
+			<p>Greetings!!! Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text  
+				Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text 
+				Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text 
+				Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text </p>
+			<div>Link to irc channel</div>
+			<div>link to <a href="/stats">stats page</a></div>
+			<div>link to <a href="/dashboard">questions</a></div>
+			<div>link to <a href="/submit">submit page</a></div>
+		</div>
+	</body>
+</html>

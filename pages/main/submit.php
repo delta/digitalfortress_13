@@ -6,16 +6,17 @@ if( $testing || isset($_REQUEST['submit'])){
 			$cat = htmlentities($_REQUEST['category'],ENT_QUOTES);
 			$task = htmlentities($_REQUEST['task'],ENT_QUOTES);
 			$ans = md5(htmlentities($_REQUEST['ans'],ENT_QUOTES));
-include "config.php";
+
+			include "config.php";
 			mysql_connect($host,$user,$pass);
 			mysql_select_db($db);
 //Test
-/*
+
 $cat="web";
 $task="task1";
 $ans=md5("hello");
 $username="test";
-*/		
+		
 			$query = "SELECT * FROM `$ans_table` where `category`='{$cat}' AND `task`='".substr($task,4)."' AND `ans`='{$ans}'";
 			$result = mysql_query($query);
 //echo $query.'<br />';
