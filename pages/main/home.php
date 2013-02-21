@@ -1,18 +1,7 @@
 <html>
 	<head>
 		<title>Digital Fortress</title>
-		<style type="text/css">
-			body{
-				margin:auto;
-				width: 1040px;
-				color: #fff;
-				background: #000;
-			}
-			
-			#maintitle{
-				text-align:center;
-			}
-		</style>
+		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>
 		<div id="maintitle">

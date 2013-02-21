@@ -1,0 +1,10 @@
+body{
+	margin:auto;
+	width: 1040px;
+	color: #fff;
+	background: #000;
+}
+
+#maintitle{
+	text-align:center;
+}
