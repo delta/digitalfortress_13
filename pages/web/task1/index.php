@@ -3,10 +3,12 @@ if(isset($_REQUEST['submit'])){
 	$connection = mysql_connect("server","user","password");
 	mysql_select_db($database_name);
 	
-	$query = "SELECT * FROM `task1` WHERE `user`={} AND `password` ";
+	$usr = $_GET['user'];
+	$pass = $_GET['password'];
+	$query = "SELECT * FROM `task1` WHERE `user`={$user} AND `password`={$pass} LIMIT 1 ";
 	$result = mysql_query($query);
 	if(mysql_affected_rows($result)){
-		
+		$ans = 'level ans';
 	}
 }
 ?>
@@ -42,6 +44,16 @@ if(isset($_REQUEST['submit'])){
 					</tr>
 				</table>
 			</form>
+			
+			<div align="center">
+				<?php
+					if(isset($_REQUEST['submit'])){
+						if(isset($ans))echo "The key for this level is : ".$ans;
+					} else {
+						echo "Wrong answer";
+					}
+				?>
+			</div>
 			</div>
 		</div>
 	</body>
