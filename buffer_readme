@@ -1,0 +1,12 @@
+Idea : 
+
+Rather than giving root permissions we can elevate their privilege to some level ! not exactly root ! 
+all users have to do is set the correct setreuid in the assembly code!!
+so that the desired (restricted)folder can be accessed ! 
+
+error: root euid and ruid is 0 ! so they might directly input 0 ....
+
+solution:what we can do is change change euid and ruid of root to some other random value so that  its impossible for them to guess !
+
+We can give them hints about the set euid and ruid of the restricted file !!!!
+
