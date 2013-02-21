@@ -37,18 +37,20 @@ if(isset($_COOKIE['user_url'])){
 					echo "U seem to b a new user";
 				}
 			?>
-			<form action="" method="get" enctype="multipart/form-data">
-				<table>
-					<tr>
-						<td><label for="file">Your file : </label></td>
-						<td><input type="file" name="file" /></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><input type="submit" name="submit" value="submit" /></td>
-					</tr>
-				</table>
-			</form>
+			<div align="center">
+				<form action="" method="get" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td><label for="file">Your file : </label></td>
+							<td><input type="file" name="file" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" name="submit" value="submit" /></td>
+						</tr>
+					</table>
+				</form>
+			</div>
 			
 		</div>	
 	</body>

@@ -4,20 +4,7 @@
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>
-		<div id="maintitle"><a href="/">
-			<pre>
-                                    __           _                     
- ____  _        _  _          _    / _|         | |                    
-|  _ \(_) __ _ (_)| |_  __ _ | |  | |_ ___  _ __| |_ _ __ ___  ___ ___ 
-| | \ | |/ _' || || __|/ _' || |  |  _/ _ \| '__| __| '__/ _ \/ __/ __|
-| |_/ | | (_| || || |_( (_| || |  | || (_) | |  | |_| | |  __/\__ \__ \
-|____/|_|\__. ||_|\___|\__._||_|  |_| \___/|_|   \__|_|  \___||___/___/
-          / | |			                                       
-         / (| |			                                       
-         \____/                                                        
-
-			</pre>                                                                                  
-		</a></div>
+		<?php require_once "header.php";?>
 		<div id="content">
 			<p>Greetings!!! Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text  
 				Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text 
