@@ -47,7 +47,7 @@ $d++;
 $temp[]=array("name"=>"$handle","score"=>"$score");
 $score_by_name["$handle"]="$score";
 $score_by_value["$score"]="$handle";
-if(!isset($_GET['sort'])||$_GET['sort']=='name')
+if(!isset($_SESSION['stats_sort'])||$_SESSION['stats_sort']=='name')
 $next='score';
 else 
 $next='name';
@@ -60,7 +60,7 @@ document.getElementById("sort").value=by;
 document.getElementById("sorter").submit();
 }
 </script>
-<form action='' method='get' id='sorter'>
+<form action='' method='post' id='sorter'>
 <input type='hidden' value='name' name='sort' id='sort'/>
 </form>
 <table id='score_table' border=5 > 
