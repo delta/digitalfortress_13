@@ -25,6 +25,7 @@ $routes = array("web/task1/"=>"/pages/web/task1/index.php",
 				"crypto/task4/"=>"/pages/crypto/task4/index.php",
 				"crypto/task5/"=>"/pages/crypto/task5/index.php",
 				"stats/"=>"/pages/main/stats.php",
+				"statsajax/"=>"/pages/main/statsajax.php",
 				"dashboard/"=>"/pages/main/dashboard.php",
 				"submit/"=>"/pages/main/submit.php");
 
