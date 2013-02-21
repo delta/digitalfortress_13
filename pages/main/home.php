@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>
-		<div id="maintitle">
+		<div id="maintitle"><a href="/">
 			<pre>
                                     __           _                     
  ____  _        _  _          _    / _|         | |                    
@@ -17,7 +17,7 @@
          \____/                                                        
 
 			</pre>                                                                                  
-		</div>
+		</a></div>
 		<div id="content">
 			<p>Greetings!!! Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text  
 				Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text 

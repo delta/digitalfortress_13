@@ -1,10 +1,69 @@
 body{
 	margin:auto;
 	width: 1040px;
-	color: #fff;
+	color: #ddd;
 	background: #000;
 }
 
 #maintitle{
 	text-align:center;
+	text-decoration: none;
+	color: #ddd;
+}
+
+#maintitle a{
+	text-decoration: none;
+	color: #ddd;
+}
+
+#maintitle a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+.center{
+	text-align:center;
+	width: 100px;
+	margin: auto;
+}
+
+input[type=text]{
+	background: #ddd;
+	color: #000;
+}
+
+input[type=password]{
+	background: #ddd;
+	color: #000;
+}
+
+a{
+	color: #ddd;
+	text-decoration:underline;
+}
+
+a:hover{
+	color: #fff;
+	text-decoration:underline;
+}
+
+table{
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #eee;
+	margin: 10px;
+	padding: 5px;
+}
+
+table tr{
+	padding:2px;
+}
+
+table td{
+	padding: 2px;
+}
+
+center{
+	font-size: 2em;
+	padding: 10px 10px 30px 10px;	
 }
