@@ -17,7 +17,7 @@ if(isset($_REQUEST['submit'])){
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>
-		
+		<?php require_once "header.php";?>
 		<div id="contents">
 			<center>Web-task-1</center>
 			<div id="question">Question question question question question question question question question question question
