@@ -1,0 +1,26 @@
+
+INSERT  INTO ans(category,task,ans) VALUES ('web','1',MD5("729c198b0cf9571deedfe3176787e40d"));
+INSERT  INTO ans(category,task,ans) VALUES ('web','2',MD5("eeb13ced4c1a7855f153510248a7fa00"));
+INSERT  INTO ans(category,task,ans) VALUES ('web','3',MD5("33cd69c166241bb2632a905f427f4676"));
+INSERT  INTO ans(category,task,ans) VALUES ('web','4',MD5("2b3fe0cf751bd39ee0a88a65ea9a7332"));
+INSERT  INTO ans(category,task,ans) VALUES ('web','5',MD5("cf56c47e6f561f575d4f277ca069cb32"));
+INSERT  INTO ans(category,task,ans) VALUES ('web','6',MD5("81efc083262aa5a036de538a34a3adbb"));
+INSERT  INTO ans(category,task,ans) VALUES ('web','7',MD5("4d2f5bb736090a62e64a2f6b4afe19a7"));
+INSERT  INTO ans(category,task,ans) VALUES ('trivia','1',MD5("6997bef1dc19b9ef4b3ed4a149651afe"));
+INSERT  INTO ans(category,task,ans) VALUES ('trivia','2',MD5("e458c83de02dbc75d13affd0ce3995ee"));
+INSERT  INTO ans(category,task,ans) VALUES ('trivia','3',MD5("813009f796c58bf43d4662d3f4184d43"));
+INSERT  INTO ans(category,task,ans) VALUES ('trivia','4',MD5("f274e316af04a5ac162ed923a0735848"));
+INSERT  INTO ans(category,task,ans) VALUES ('trivia','5',MD5("1f2c9df19ea3ff7611506791d19cf60b"));
+INSERT  INTO ans(category,task,ans) VALUES ('trivia','6',MD5("fb63b237b55646fae8aa60ad210946f9"));
+INSERT  INTO ans(category,task,ans) VALUES ('trivia','7',MD5("3a29fd6289d3b3d8f9c4015b902a284d"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','1',MD5("63f901e30c2114358475d37412838ad3"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','2',MD5("90a8468110bc7cd5e6a7991fb26b91cf"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','3',MD5("20e8d63edfcbc9c80a3fc643706c0d4d"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','4',MD5("8b8e78853e1f96bde0781e5110a8401e"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','5',MD5("5007ba773d2085bbdd292e0d54e318e3"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','6',MD5("a8f1c5f51658e3b2e4c5556a1f63d559"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','7',MD5("c26666b1dfd6ac4a83975cab1c83b9ab"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','8',MD5("4293ebda3ce58e0f824c8e256de4ce27"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','9',MD5("fe91823eb78449d786ce3f1face815f8"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','10',MD5("5a7c2e7813fd308c1a716b1701b2d042"));
+INSERT  INTO ans(category,task,ans) VALUES ('crypto','11',MD5("e239558226f56d3f65b07fbb05638e70"));
