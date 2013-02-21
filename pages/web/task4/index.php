@@ -36,6 +36,7 @@ if(isset($_COOKIE["username"])){
 ?>
 
 		<a href="<?php echo $redirect;?>register">REGISTER</a>
+			<div align="center">
 			<form method="get" action="login.php">
 				<table>
 					<tr>
@@ -52,6 +53,7 @@ if(isset($_COOKIE["username"])){
 					</tr>
 				</table>
 			</form>
+			</div>
 <?
 }
    if(isset($_COOKIE['final'])){

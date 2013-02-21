@@ -21,6 +21,7 @@ if(isset($_REQUEST['submit'])){
 		<p>You seem to have found the encrypted password of derp and he uses his own encrypting algorithm.
 			You have access to the machine that encrypts the password</p>
 		<p>Derps encrypted password is "asdfasdfafsdf"(quotes for clarity). His password is the answer for this level</p>
+			<div align="center">
 			<form method="get" action="">
 				<table>
 					<tr>
@@ -29,6 +30,7 @@ if(isset($_REQUEST['submit'])){
 					</tr>
 				</table>
 			</form>
+			</div>
 		<?php
 			if(isset($string) && !empty($string))echo "The encrypted string is :  ".$string;
 		?>

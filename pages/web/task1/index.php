@@ -25,7 +25,7 @@ if(isset($_REQUEST['submit'])){
 				  question question question question question question question question question question question question question
 				   question question question question question question question question question question question question
 		   </div>
-		
+			<div align="center">	
 			<form method="get" action="">
 				<table>
 					<tr>
@@ -42,7 +42,7 @@ if(isset($_REQUEST['submit'])){
 					</tr>
 				</table>
 			</form>
-			
+			</div>
 		</div>
 	</body>
 </html>
