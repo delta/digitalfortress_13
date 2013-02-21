@@ -11,12 +11,12 @@ if( $testing || isset($_REQUEST['submit'])){
 			mysql_connect($host,$user,$pass);
 			mysql_select_db($db);
 //Test
-
+/*
 $cat="web";
 $task="task1";
 $ans=md5("hello");
 $username="test";
-		
+*/	
 			$query = "SELECT * FROM `$ans_table` where `category`='{$cat}' AND `task`='".substr($task,4)."' AND `ans`='{$ans}'";
 			$result = mysql_query($query);
 //echo $query.'<br />';

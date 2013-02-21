@@ -8,8 +8,10 @@
 <html>
 	<head>
 		<title>Crappy SIte</title>
+		<link rel="stylesheet" href="/css/template.css" type="text/css"/>		
 	</head>
 	<body>
+		<?php require_once "header.php";?>
 		<center>task4</center>
                 <a href="<?php echo $redirect;?>home">HOME</a>
 		<a href="">SUBSCRIBE</a>
@@ -34,14 +36,24 @@ if(isset($_COOKIE["username"])){
 ?>
 
 		<a href="<?php echo $redirect;?>register">REGISTER</a>
-		<form method="get" action="login.php">
-			<input type="text" name="user" />
-			<input type="password" name="password" />
-			<input type="submit" name="submit" value="submit"/>
-		</form>
-
-
-
+			<div align="center">
+			<form method="get" action="login.php">
+				<table>
+					<tr>
+						<td><label for="user">Username : </label></td>
+						<td><input type="text" name="user" /></td>
+					</tr>
+					<tr>
+						<td><label for="user">Password : </label></td>
+						<td><input type="password" name="password" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" name="submit" value="submit"/></td>
+					</tr>
+				</table>
+			</form>
+			</div>
 <?
 }
    if(isset($_COOKIE['final'])){
