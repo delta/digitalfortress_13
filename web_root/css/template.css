@@ -6,6 +6,7 @@ body{
 }
 
 #maintitle{
+	padding:10px;
 	text-align:center;
 	text-decoration: none;
 	color: #ddd;
