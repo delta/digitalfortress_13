@@ -2,16 +2,21 @@
 	include 'config.php';
 	mysql_connect($host,$user,$pass);
 	mysql_select_db($db);
+	if($testing)
 	$user='test';
 ?>
-
+<html>
+<head>
+		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
+</head>
 <style>
 	.inline{
 		display:inline;
 	}
 </style>
-
+<body>
 <?php
+	require_once "header.php";
 	$query="SELECT * FROM `$user_table` WHERE `user_name` = '$user' LIMIT 1";
 	$result=mysql_query($query);
 	$row=mysql_fetch_assoc($result);
@@ -38,3 +43,4 @@
 		}
 	}
 ?>
+</body>
