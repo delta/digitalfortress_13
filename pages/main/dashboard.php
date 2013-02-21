@@ -31,7 +31,7 @@
 		$d=0;
 		foreach($scores[$c-1] as $t){
 			$d++;
-			echo "<a href='../$cat/task$d.php' class='inline' >Task $d</a>";
+			echo "<a href='../$cat/task$d/' class='inline' >Task $d</a>";
 			if($done[$d])echo "<img height = '20' src='images/tick.png' />";
 			else echo "&nbsp;&nbsp;";
 			echo "&nbsp;&nbsp;&nbsp;";
