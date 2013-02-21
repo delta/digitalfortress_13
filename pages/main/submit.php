@@ -73,7 +73,7 @@ $username="test";
 			<label for="ans">Ans:</label>
 			</td>
 			<td>
-			<input type="text" name="ans" value="ans"/>
+			<input type="text" name="ans" placeholder="answer"/>
 			</td>
 			<td>
 			<input type="submit" name="submit" value="submit" />
