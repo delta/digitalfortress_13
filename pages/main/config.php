@@ -6,6 +6,7 @@
 			$user_table="users";
 			$score_table="scores";
 			$ans_table="ans";
+			$testing=1;
 			$categories=array("web","trivia","crypto");
 			$scores=array(
 					array(10,20,30,40),

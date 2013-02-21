@@ -1,5 +1,4 @@
 <?php
-$testing=0;
 if( $testing || isset($_REQUEST['submit'])){
 	if( $testing || isset($_REQUEST['category']) && isset($_REQUEST['task'])){
 		if($testing || $_REQUEST['category']<=5 && $_REQUEST['category']>0 && $_REQUEST['task']<=5 && $_REQUEST['task']>0){
@@ -11,12 +10,13 @@ if( $testing || isset($_REQUEST['submit'])){
 			mysql_connect($host,$user,$pass);
 			mysql_select_db($db);
 //Test
-/*
+if($testing)
+{
 $cat="web";
 $task="task1";
 $ans=md5("hello");
 $username="test";
-*/	
+}
 			$query = "SELECT * FROM `$ans_table` where `category`='{$cat}' AND `task`='".substr($task,4)."' AND `ans`='{$ans}'";
 			$result = mysql_query($query);
 //echo $query.'<br />';
@@ -38,29 +38,48 @@ $username="test";
 <html>
 	<head>
 		<title></title>
+		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>
+			<?php require_once "header.php";?>
 		<center>submission page</center>
+		<div align="center">
 		<form action="" method="get">
-			<label for="category">category</label>
-			<select name="category">
+		<table>
+		<tr>
+			<td><label for="category">category</label></td>
+			<td><select name="category">
 				<option value="1">crypto</option>
 				<option value="2">web</option>
 				<option value="3">reverse engineer</option>
 				<option value="4">trivia</option>
 				<option value="5"></option>
 			</select>
-			<label for="task">Select a task</label>
-			<select name="task">
+			</td>
+			</tr>
+			<tr>
+			<td><label for="task">Select a task</label></td>
+			<td><select name="task">
 				<option value="1">task1</option>
 				<option value="2">task2</option>
 				<option value="3">task3</option>
 				<option value="4">task4</option>
 				<option value="5">task5</option>
 			</select>
+			</td>
+			</tr>
+			<tr>
+			<td>
 			<label for="ans">Ans:</label>
+			</td>
+			<td>
 			<input type="text" name="ans" value="ans"/>
+			</td>
+			<td>
 			<input type="submit" name="submit" value="submit" />
+			</td>
+			</tr>
 		</form>
+		</div>
 	</body>
 </html>
