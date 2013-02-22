@@ -3,7 +3,8 @@
 	mysql_connect($host,$user,$pass);
 	mysql_select_db($db);
 ?>
-<center><h2>Scores</h2>
+<center><h2>Scores</h2></center>
+<center>
 <style>
 	#team_name{
 		text-align:center;
