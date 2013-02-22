@@ -21,7 +21,7 @@ if(isset($_REQUEST['submit'])){
 		<?php require_once "header.php";?>
 		<div id="contents">
 			<center>Trivia-task-5</center>
-			<div id="question" align="center"><img src='/images/BGE-cover.jpg'/></div>
+			<div id="question" align="center"><img src='/images/BGE-cover.jpg' style="border: solid 10px #ddd"/></div>
 			
 			<?php
 				if(isset($_REQUEST['ans']) && $flag){
