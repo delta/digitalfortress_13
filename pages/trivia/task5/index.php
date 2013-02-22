@@ -3,7 +3,7 @@ if(isset($_REQUEST['submit'])){
 	if(isset($_REQUEST['ans'])){
 		$ans = stripslashes($_REQUEST['ans']);
 		$flag =1;
-		if(md5($ans)==="md5ans"){
+		if(md5($ans)==="39a277385d320e7945ca033fa4001c1c" || md5($ans)==="04d02f247eb31523274ac4b9d1ddc6fe"){
 			$ans = "level password";
 		} else {
 			$flag = 0;
@@ -21,15 +21,11 @@ if(isset($_REQUEST['submit'])){
 		<?php require_once "header.php";?>
 		<div id="contents">
 			<center>Trivia-task-5</center>
-			<div id="question">Question question question question question question question question question question question
-				 question question question question question question question question question question question question question
-				  question question question question question question question question question question question question question
-				   question question question question question question question question question question question question
-		   </div>
+			<div id="question" align="center"><img src='/images/BGE-cover.jpg'/></div>
 			
 			<?php
 				if(isset($_REQUEST['ans']) && $flag){
-					echo $ans;
+					echo "<br/><br/><div align='center' style='padding:10px;'>LEVEL PASSWORD: ".$ans."</div>";
 				} else if(!isset($_REQUEST['ans']) || !$flag){
 					if(isset($_REQUEST['ans']))echo "<div align='center' class='center' style='padding-top:20px;'>Wrong ans</div>";
 					?>
