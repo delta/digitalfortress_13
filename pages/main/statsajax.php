@@ -1,5 +1,5 @@
 <?php 
-	include "config.php";
+	include "configs.php";
 	mysql_connect($host,$user,$pass);
 	mysql_select_db($db);
 ?>

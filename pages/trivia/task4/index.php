@@ -4,7 +4,7 @@ if(isset($_REQUEST['submit'])){
 	if(isset($_REQUEST['ans'])){
 		$ans = strtoupper(stripslashes($_REQUEST['ans']));
 		$flag =1;
-		if(md5($ans)==="a58e0423869da99d6ca169de8a000cc7"){
+		if(md5($ans)==="a58e0423869da99d6ca169de8a000cc7"||md5($ans)==="3d58aded5f9b5c7e1b8cb80b776f1ccf"){
 			$ans = "level password";
 		} else {
 			$flag = 0;
