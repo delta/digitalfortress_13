@@ -25,7 +25,7 @@ if(isset($_REQUEST['submit'])){
 			<div id="question"><pre>
 			quick_sort(x) = if eof(first x) then x else follow(quick_sort(y),quick_sort(z)) fi<br />
 				where<br />
-				p = first x < a;<br />
+				p = first x < x;<br />
 				y = x whenever p;<br />
 				z = x whenever not p;<br />
 				follow(u,v) = if udone then v upon udone else u fi<br />
