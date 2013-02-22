@@ -1,4 +1,5 @@
 <?php
+//ans is INTENSIONALPROGRAMMING
 if(isset($_REQUEST['submit'])){
 	if(isset($_REQUEST['ans'])){
 		$ans = stripslashes($_REQUEST['ans']);

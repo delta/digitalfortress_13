@@ -3,10 +3,8 @@
 $polybius=array();
 
 for($i=0;$i<5;$i++)
-for($j=0;$j<=5;$j++)
-{
-$polybius[''.chr(ord('z')-$i*5-$j)]=''.$i.$j;
-}
+	for($j=0;$j<=5;$j++)$polybius[''.chr(ord('z')-$i*5-$j)]=''.$i.$j;
+
 if(isset($_REQUEST['submit'])){
 	$string = $_REQUEST['pass'];
 	$key = "thisisaverypoorpassword";
@@ -34,7 +32,7 @@ if(isset($_REQUEST['submit'])){
 				<p>Derpina is too weak at remembering password so she used a weak encryption using only alphabetic characters .<br >
 				Derp, the hacker found out Derpina's encrypted password to be "<b>1133321232124504411301202121132045121203211342</b>" (quotes for clarity) and he guesses that Derpina uses polybius encryption.But Derpina is known for doing things in reverse, so help Derp to decrypt her password.      </p>
 			</div>
-			<div align="center">	
+			<div align="center">
 				<form method="get" action="">
 						<table>
 							<tr>

@@ -1,43 +1,34 @@
 <?php
 
-$rail=array();
-$railno=4;
-$flag=1;
-if(isset($_REQUEST['submit'])){
-	$string = strtoupper($_REQUEST['pass']);
-	$ans=strtoupper("ifyoucancrackthisyouwin");
-	$x=0;
-for($i=0;$i<strlen($string);$i++)
-{
-$rail[]=array();
-for($j=0;$j<$railno;$j++)
-if($j==$x)
-$rail[$i][$j]=$string[$i];
-else
-$rail[$i][$j]='$';
-if($x==$railno-1 && $flag)$flag=0;
-else if($x==0 && $flag==0)$flag=1;
-if($flag)$x++;
-else $x--;
-}
-//echo "<pre>";
-//print_r($rail);
-//echo "</pre>";
-	$string1 = "";
-	for($j=0;$j<$railno;$j++)
-	{
-		$string1.=" ";
-	for($i=0;$i<strlen($string);$i++)
-	{
-//	echo "s";
-		if($rail[$i][$j]!="$")
-		$string1 .= $rail[$i][$j];
-
-	}
+	$rail=array();
+	$railno=4;
+	$flag=1;
 	
+	if(isset($_REQUEST['submit'])){
+		$string = strtoupper($_REQUEST['pass']);
+		$ans=strtoupper("ifyoucancrackthisyouwin");
+		$x=0;
+		
+		for($i=0;$i<strlen($string);$i++){
+			$rail[]=array();
+			for($j=0;$j<$railno;$j++)
+				if($j==$x)$rail[$i][$j]=$string[$i];
+				else $rail[$i][$j]='$';
+			if($x==$railno-1 && $flag)$flag=0;
+			else if($x==0 && $flag==0)$flag=1;
+			if($flag)$x++;
+			else $x--;
+		}
+		$string1 = "";
+		for($j=0;$j<$railno;$j++){
+			$string1.=" ";
+			for($i=0;$i<strlen($string);$i++){
+				if($rail[$i][$j]!="$")
+				$string1 .= $rail[$i][$j];
+			}
+		}
+			
 	}
-	
-}
 ?>
 <html>
 	<head>
