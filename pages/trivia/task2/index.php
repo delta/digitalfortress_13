@@ -23,14 +23,14 @@ if(isset($_REQUEST['submit'])){
 		<div id="contents">
 			<center>Trivia-task-2</center>
 			<div id="question"><pre>
-			quick_sort(a) = if eof(first a) then a else follow(quick_sort(b0),quick_sort(b1)) fi<br />
+			quick_sort(x) = if eof(first x) then x else follow(quick_sort(y),quick_sort(z)) fi<br />
 				where<br />
-				p = first a < a;<br />
-				b0 = a whenever p;<br />
-				b1 = a whenever not p;<br />
-				follow(x,y) = if xdone then y upon xdone else x fi<br />
+				p = first x < a;<br />
+				y = x whenever p;<br />
+				z = x whenever not p;<br />
+				follow(u,v) = if udone then v upon udone else u fi<br />
 					where<br />
-						xdone = iseod x fby xdone or iseod x;<br />
+						udone = iseod u fby udone or iseod u;<br />
 					end;<br />
 			end;<br /><br /><br />
 			</pre></div>
