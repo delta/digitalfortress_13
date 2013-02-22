@@ -1,5 +1,5 @@
 <?php
-	include "config.php";
+	include "configs.php";
 	if(isset($_POST['sort']))
 	$_SESSION['stats_sort']=$_POST['sort'];
 ?>
