@@ -24,6 +24,7 @@
 //	echo $team;
 
 	$c=0;
+	$score=0;
 	echo "<table style='text-align:center' border=1><thead><th>Category</th><th>Task1</th><th>Task2</th><th>Task3</th><th>Task4</th><th>Task5</th></thead><tbody>";
 	foreach($categories as $cat){
 		echo "<tr><td>$cat:</td>";
@@ -40,8 +41,11 @@
 			$d++;
 			$counter++;
 			echo "<td>";
-			if($done[$d])
-					echo "<a href='../$cat/task$d/' class='inline' ><img height = '20' src='images/tick.png' /></a>";
+			if($done[$d] )
+					{
+					echo "<a href='../$cat/task$d/' class='inline' ><img height = '20' src='images/tick.jpg' /></a>";
+					$score=$score+$t;
+					}
 			else 
 					echo "<a href='../$cat/task$d/' class='inline' >Task$d</a>";
 		}
@@ -49,5 +53,6 @@
 		echo "</tr>";
 	}
 	echo "</tbody></table>";
+	echo "<center><h5>Total Score: $score</h5></center>";
 ?>
 </body>
