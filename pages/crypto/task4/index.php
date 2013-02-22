@@ -1,5 +1,4 @@
 <?php
-
 	$vigenere=array();
 	$x=0;
 	
@@ -8,9 +7,6 @@
 		for($j=0;$j<26;$j++)$vigenere[$i][]=chr(65+($x+$j)%26);
 	}
 	
-	//echo "<pre>";
-	//print_r($vigenere);
-	//echo "</pre>";
 	if(isset($_REQUEST['submit'])){
 		$string = strtoupper($_REQUEST['pass']);
 		$keystring = "FLOWER";

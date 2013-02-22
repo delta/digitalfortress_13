@@ -22,18 +22,18 @@ if(isset($_REQUEST['submit'])){
 		<?php require_once "header.php";?>
 		<div id="contents">
 			<center>Trivia-task-2</center>
-			<div id="question">
-				qsort(a) = if eof(first a) then a else follow(qsort(b0),qsort(b1)) fi<br />
-  				&nbsp;&nbsp;&nbsp;&nbsp;	where<br />
-     			&nbsp;&nbsp;&nbsp;&nbsp;	p = first a &#60; a;<br />
-     			&nbsp;&nbsp;&nbsp;&nbsp;	b0 = a whenever p;<br />
-     			&nbsp;&nbsp;&nbsp;&nbsp;	b1 = a whenever not p;<br />
-     			&nbsp;&nbsp;&nbsp;&nbsp;	follow(x,y) = if xdone then y upon xdone else x fi<br />
-     			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		where<br />
-     			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			xdone = iseod x fby xdone or iseod x;<br />
-     			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		end;<br />
-				end;<br /><br /><br />
-			</div>
+			<div id="question"><pre>
+			quick_sort(a) = if eof(first a) then a else follow(quick_sort(b0),quick_sort(b1)) fi<br />
+				where<br />
+				p = first a < a;<br />
+				b0 = a whenever p;<br />
+				b1 = a whenever not p;<br />
+				follow(x,y) = if xdone then y upon xdone else x fi<br />
+					where<br />
+						xdone = iseod x fby xdone or iseod x;<br />
+					end;<br />
+			end;<br /><br /><br />
+			</pre></div>
 			<div>Note: Answers consists only of uppercase letters and do not contain special characters or white spaces..</div>
 			<?php
 				if(isset($_REQUEST['ans']) && $flag){
