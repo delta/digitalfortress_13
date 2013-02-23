@@ -19,12 +19,22 @@
 		<a href="">PRODUCTS</a>
 
 <?php
-if(isset($_SESSION["cookie"]))
+//print_r($_SESSION);
+if(isset($_SESSION["cookie"]) && ($_SESSION['task4loggedin']==1))
 {
-		   
+		   foreach($_SESSION['cookie'] as $key=>$value)
+		   setcookie("$key",$value);
+		   /*
 	       setcookie("username",$_SESSION["cookie"]['username']);
 	       setcookie("password",$_SESSION["cookie"]['password']);
 	       setcookie("manager",$_SESSION["cookie"]["manager"]);
+		    */
+}
+if($_SESSION['task4loggedin']==0){
+	setcookie("username","",time()-36000);
+	setcookie("password","",time()-36000);
+	setcookie("manager","",time()-36000);
+	setcookie("final","",time()-36000);
 }
 if(isset($_COOKIE["username"])){
 	
