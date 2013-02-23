@@ -10,7 +10,7 @@
 	if(isset($_REQUEST['submit'])){
 		$string = strtoupper($_REQUEST['pass']);
 		$keystring = "FLOWER";
-		$ans="ifderpcancrackthisheisawesome";
+		$ans="yxsmpjguavpazhe";
 		$key=array();
 		
 		for($i=0;$i<strlen($string);$i++)$key[]=$keystring[$i%6];
@@ -38,10 +38,10 @@
 		<div id="content">
 			<center>Crypto-task-4</center>
 			<div id="question">
-				<font size=5 ><p>Derpina is aware that Derp is trying to find out her passwords.So she searched for a better encryption for storing her "flower" store and came across an encryption developed by  Leon Battista Alberti.<br >
+				<p>Derpina is aware that Derp is trying to find out her passwords.So she searched for a better encryption for storing her passwords and came across an encryption developed by  Leon Battista Alberti.<br >
 			You have to help Derp in his mission as he is clueless except for the encrypted string  
-			"<b>NQRAVGHLBYVRHVHDMJMPWOENJDCII</b>" (quotes for clarity).      </p>
-			</font>
+			"<b>DIGITALFORTRESS</b>" (quotes for clarity).      </p>
+			
 			</div>
 			<div align="center">	
 				<form method="get" action="">
