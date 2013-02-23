@@ -1,10 +1,10 @@
 <?php
 			$host="localhost";
-			$user="paramesh";
-			$dummyuser="paramesh";
-			$dummypassword="pass";
-			$pass="pass";
 			$db  ="digitalfortress";
+			$user="digitalfortress";
+			$pass="mpwn4GhBqR7LmzjU";
+			$task1user="task1";
+			$task1password="aqUGHGeXqrjtuEVj";
 			$user_table="users";
 			$score_table="scores";
 			$ans_table="ans";

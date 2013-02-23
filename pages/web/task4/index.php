@@ -19,7 +19,7 @@
 
 <?php
 if(isset($_COOKIE["username"])){
-   if($_COOKIE["username"] == "POKKA_DELTA"){
+   if($_COOKIE["username"] == "VIGNESH_DELTA"){
 ?>
          <a href="<?php echo $redirect;?>pmessage">PRIVATE MESSAGE</a>
 <?php
