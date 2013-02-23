@@ -1,18 +1,17 @@
 <?php
 	
-if(isset($_GET['submit'])){
+if(isset($_POST['submit'])){
 	if($_FILES['file']['error']==0){
-		$filename = sha1(uniqid(mt_rand()), TRUE);
-		$path = "/tmp/";
-		if(move_uploaded_file($_FILES['file']['tmp_name'], $path.$filename)){
-			$_COOKIE['user_url'] = $path.$filename;
+		$filename = sha1(mt_rand());
+		$path = "tmp/".$filename.basename($_FILES["file"]["name"]);
+		if(move_uploaded_file($_FILES['file']['tmp_name'], $path)){
+			$_COOKIE['user_url'] = "/".$path;
+			setcookie('user_url',$_COOKIE['user_url']);
 		}
 	}
 	$url = "not found img url";
 }
-if(isset($_COOKIE['user_url'])){
-		$url=$_COOKIE['user_url'];
-}
+
 ?>
 
 <html>
@@ -27,14 +26,22 @@ if(isset($_COOKIE['user_url'])){
 			<div id="question"></div>
 		   
 		   
-			<img src="<?php echo $url?>">
+		   
+			<img src="<?php 
+				
+				if(isset($_COOKIE['user_url'])){
+					if($url=="../passwd.txt" || $_COOKIE['user_url']=='../passwd.txt'){require_once 'passwd.txt'; echo "\">";}
+					else echo $_COOKIE['user_url']."\">";
+				}
+			
+			?> 
 			<?php 
 				if(!isset($_COOKIE['user_url'])){
 					echo "U seem to b a new user";
 				}
 			?>
 			<div align="center">
-				<form action="" method="get" enctype="multipart/form-data">
+				<form action="" method="post" enctype="multipart/form-data">
 					<table>
 						<tr>
 							<td><label for="file">Your file : </label></td>
