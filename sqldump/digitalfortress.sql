@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 21, 2013 at 03:54 PM
+-- Generation Time: Feb 23, 2013 at 12:06 PM
 -- Server version: 5.5.22
 -- PHP Version: 5.3.10-1ubuntu3.1
 
@@ -57,12 +57,8 @@ INSERT INTO `ans` (`category`, `task`, `ans`) VALUES
 ('crypto', 3, 'd5fb3c081dabca799d1021b7c791c879'),
 ('crypto', 4, 'c03e520126fe600a888ca329a71901ef'),
 ('crypto', 5, '2b2f1544169e24dde08fc928f9876710'),
-('crypto', 6, '0dba5a7dcf113aea83d9622fd346cd57'),
-('crypto', 7, '2e1ba4e2e743a2cc8c892e06960cc87c'),
-('crypto', 8, '193978f0d3161191daf6d6155b634c7e'),
-('crypto', 9, '503cab77d96283687a5c3df7f37e8f3d'),
-('crypto', 10, '756e011c24568ec216c965cee99710ae'),
-('crypto', 11, 'bdfbf96ac0343099a42a2aa5efb9b86e');
+('1', 1, 'a58e0423869da99d6ca169de8a000cc7'),
+('web', 1, '5d41402abc4b2a76b9719d911017c592');
 
 -- --------------------------------------------------------
 
@@ -74,6 +70,7 @@ CREATE TABLE IF NOT EXISTS `scores` (
   `handle` varchar(25) NOT NULL,
   `task_id` int(11) NOT NULL,
   `category` varchar(20) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`handle`,`task_id`,`category`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -81,9 +78,28 @@ CREATE TABLE IF NOT EXISTS `scores` (
 -- Dumping data for table `scores`
 --
 
-INSERT INTO `scores` (`handle`, `task_id`, `category`) VALUES
-('testhandle', 3, '1'),
-('testhandle1', 1, '1');
+INSERT INTO `scores` (`handle`, `task_id`, `category`, `time`) VALUES
+('test', 1, 'web', '2013-02-22 12:41:58'),
+('testhandle', 3, '1', '0000-00-00 00:00:00'),
+('testhandle1', 1, '1', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `task1`
+--
+
+CREATE TABLE IF NOT EXISTS `task1` (
+  `user` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `task1`
+--
+
+INSERT INTO `task1` (`user`, `password`) VALUES
+('testuser', 'testpass');
 
 -- --------------------------------------------------------
 
