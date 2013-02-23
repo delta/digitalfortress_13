@@ -6,7 +6,7 @@ if(isset($_POST['submit'])){
 		$path = "tmp/".$filename.basename($_FILES["file"]["name"]);
 		if(move_uploaded_file($_FILES['file']['tmp_name'], $path)){
 			$_COOKIE['user_url'] = "/".$path;
-			setcookie('user_url',$_COOKIE['user_url']);
+			setcookie('user_url',$_COOKIE['user_url'],time()+600);
 		}
 	}
 	$url = "not found img url";
@@ -23,14 +23,14 @@ if(isset($_POST['submit'])){
 		<?php require_once "header.php";?>
 		<div id="contents">
 			<center>Web-task-3</center>
-			<div id="question"></div>
-		   
-		   
+			<div id="question">
+				
+			</div>
 		   
 			<img src="<?php 
 				
 				if(isset($_COOKIE['user_url'])){
-					if($url=="../passwd.txt" || $_COOKIE['user_url']=='../passwd.txt'){require_once 'passwd.txt'; echo "\">";}
+					if($url=="../passwd.txt" || $_COOKIE['user_url']=='../passwd.txt'){echo $levelpass[0][2];}
 					else echo $_COOKIE['user_url']."\">";
 				}
 			
