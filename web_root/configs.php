@@ -1,10 +1,10 @@
 <?php
 			$host="localhost";
-			$user="paramesh";
-			$dummyuser="paramesh";
-			$dummypassword="pass";
-			$pass="pass";
 			$db  ="digitalfortress";
+			$user="digitalfortress";
+			$pass="mpwn4GhBqR7LmzjU";
+			$task1user="task1";
+			$task1password="aqUGHGeXqrjtuEVj";
 			$user_table="users";
 			$score_table="scores";
 			$ans_table="ans";
@@ -12,9 +12,9 @@
 			$categories=array("web","trivia","crypto");
 			$maxtasks=5;
 			$scores=array(
-					array(10,20,30,40),
-					array(10,20,30,40,50),
-					array(10,20,30,40,50)
+					array(100,200,300,400),
+					array(100,200,300,400,500),
+					array(100,200,300,400,500)
 				     );
 			session_start();
 

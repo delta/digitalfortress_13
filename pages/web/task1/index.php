@@ -2,7 +2,7 @@
 if(isset($_REQUEST['submit'])){
 	include "configs.php";
 	
-	$connection = mysql_connect($host,$dummyuser,$dummypassword) or die(mysql_error());
+	$connection = mysql_connect($host,$task1user,$task1password) or die(mysql_error());
 	mysql_select_db($db) or die(mysql_error());
 	
 	$usr = ($_GET['user']);
