@@ -1,10 +1,8 @@
 <?php
-   if(isset($_REQUEST['final']))
-      setcookie("final","almost complete");
-  			$hs  = "http://".$_SERVER['HTTP_HOST'];
-			$url   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-                        $redirect = $hs.$url."?pages=";
-	session_start();
+	if(isset($_REQUEST['final'])) setcookie("final","almost complete");
+	$hs  = "http://".$_SERVER['HTTP_HOST'];
+	$url   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+    $redirect = $hs.$url."?pages=";
 ?>
 <html>
 	<head>
@@ -14,7 +12,7 @@
 	<body>
 		<?php require_once "header.php";?>
 		<center>task4</center>
-                <a href="<?php echo $redirect;?>home">HOME</a>
+        <a href="<?php echo $redirect;?>home">HOME</a>
 		<a href="">SUBSCRIBE</a>
 		<a href="">PRODUCTS</a>
 
@@ -37,8 +35,7 @@ if($_SESSION['task4loggedin']==0){
 	setcookie("final","",time()-36000);
 }
 if(isset($_COOKIE["username"])){
-	
-   if($_COOKIE["username"] == "VIGNESH_DELTA"){
+	if($_COOKIE["username"] == "VIGNESH_DELTA"){
 ?>
          <a href="<?php echo $redirect;?>pmessage">PRIVATE MESSAGE</a>
 <?php
@@ -48,7 +45,7 @@ if(isset($_COOKIE["username"])){
 <?php
 }
 ?>
-         <a href="/web/task4/logout">LOGOUT</a>
+         <a href="logout.php">LOGOUT</a>
 
 <?
 }else{
