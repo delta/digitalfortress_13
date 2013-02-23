@@ -3,9 +3,9 @@
 if(isset($_GET['submit'])){
 	if($_FILES['file']['error']==0){
 		$filename = sha1(uniqid(mt_rand()), TRUE);
-		$path = "./tmp/";
-		if(move_uploaded_file($_FILES['file']['tmp_name'], $filename.$path)){
-			$_COOKIE['user_url'] = "";
+		$path = "/tmp/";
+		if(move_uploaded_file($_FILES['file']['tmp_name'], $path.$filename)){
+			$_COOKIE['user_url'] = $path.$filename;
 		}
 	}
 	$url = "not found img url";
