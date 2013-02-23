@@ -25,9 +25,9 @@ if(isset($_REQUEST['submit'])){
 			
 			<?php
 				if(isset($_REQUEST['ans']) && $flag){
-					echo "<br/><br/><div align='center' style='padding:10px;'>LEVEL PASSWORD: ".$ans."</div>";
+					echo "<br/><br/><div align='center' style='padding:10px 10px 50px 10px;'>LEVEL PASSWORD: ".$ans."</div>";
 				} else if(!isset($_REQUEST['ans']) || !$flag){
-					if(isset($_REQUEST['ans']))echo "<div align='center' class='center' style='padding-top:20px;'>Wrong ans</div>";
+					if(isset($_REQUEST['ans']))echo "<div align='center' class='center' style='padding-top: 20px 10px 20px 10px;'>Wrong ans</div>";
 					?>
 			<div align="center">
 				<form action="" method="get" enctype="multipart/form-data">
