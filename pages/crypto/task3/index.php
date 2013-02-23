@@ -1,10 +1,23 @@
 <?php
 
 $polybius=array();
-
+$i=0;
+$j=0;
+$k=0;
+$flag=1;
 for($i=0;$i<5;$i++)
-	for($j=0;$j<=5;$j++)$polybius[''.chr(ord('z')-$i*5-$j)]=''.$i.$j;
-
+for($j=$k;$j<5+$k;$j++)
+{
+if($flag && chr(ord('z')-$i*5-$j)=='i'){
+$flag=0;
+	$polybius['i']=$i.($j-1);
+	$k=1;	
+}
+else 
+$polybius[''.chr(ord('z')-$i*5-$j)]=$i.($j-$k);
+}
+//$polybius['a']='44';
+//print_r($polybius);
 if(isset($_REQUEST['submit'])){
 	$string = $_REQUEST['pass'];
 	$key = "thisisaverypoorpassword";
