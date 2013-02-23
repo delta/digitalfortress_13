@@ -3,6 +3,7 @@
 	$hs  = "http://".$_SERVER['HTTP_HOST'];
 	$url   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
     $redirect = $hs.$url."?pages=";
+	session_start();
 ?>
 <html>
 	<head>
@@ -22,20 +23,23 @@ if(isset($_SESSION["cookie"]) && ($_SESSION['task4loggedin']==1))
 {
 		   foreach($_SESSION['cookie'] as $key=>$value)
 		   setcookie("$key",$value);
+		   if($key=='username')$tempusername=$value;
 		   /*
 	       setcookie("username",$_SESSION["cookie"]['username']);
 	       setcookie("password",$_SESSION["cookie"]['password']);
 	       setcookie("manager",$_SESSION["cookie"]["manager"]);
 		    */
 }
-if($_SESSION['task4loggedin']==0){
+
+if(isset($_SESSION['task4loggedin']) && $_SESSION['task4loggedin']==0){
 	setcookie("username","",time()-36000);
 	setcookie("password","",time()-36000);
 	setcookie("manager","",time()-36000);
 	setcookie("final","",time()-36000);
 }
-if(isset($_COOKIE["username"])){
-	if($_COOKIE["username"] == "VIGNESH_DELTA"){
+
+if(isset($_COOKIE["username"])||($_SESSION['task4loggedin'])){
+	if($_SESSION['cookie']["username"]  == "VIGNESH_DELTA"||$_COOKIE["username"] == "VIGNESH_DELTA"){
 ?>
          <a href="<?php echo $redirect;?>pmessage">PRIVATE MESSAGE</a>
 <?php
