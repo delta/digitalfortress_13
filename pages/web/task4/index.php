@@ -13,11 +13,11 @@
 	<body>
 		<?php require_once "header.php";?>
 		<center>task4</center>
-		<p>hey i'm paramesh! i did intern in this company "Crappy" and developed a few apps. but in the end i got in bad terms with my team manager and he won't add me to final list of ppo but i built most part of the app. Can u please hack their site and add me to the list by accessing manager admin page. And also u hav to get the ceo admin panel and re-accept the list.. i hav left a loop hole in the admin md5 login panel. i dnt knw my manager's user name but his name is "Vignesh". All the BEst!! </p>
+		<p>hey i'm Paramesh! i did intern in this company "Crappy" and developed a few apps. but in the end i got in bad terms with my team manager and he won't add me to final list of ppo but i built most part of the app. Can u please hack their site and add me to the list by accessing manager admin page. And also u hav to get the ceo admin panel and re-accept the list.. i hav left a loop hole in the admin md5 login panel. i dnt knw my manager's user name but his name is "Vignesh". All the BEst!! </p>
 
         <a href="<?php echo $redirect;?>home">HOME</a>
-		<a href="">SUBSCRIBE</a>
-		<a href="">PRODUCTS</a>
+		<a href="<?php echo $redirect;?>subscribe">SUBSCRIBE</a>
+		<a href="<?php echo $redirect;?>products">PRODUCTS</a>
 
 <?php
 //print_r($_SESSION);
@@ -64,15 +64,15 @@ if(isset($_SESSION['task4loggedin'])){
 				<table>
 					<tr>
 						<td><label for="user">Username : </label></td>
-						<td><input type="text" name="user" /></td>
+						<td><input type="text" name="user" placeholder="Enter Username"/></td>
 					</tr>
 					<tr>
 						<td><label for="user">Password : </label></td>
-						<td><input type="password" name="password" /></td>
+						<td><input type="password" name="password" placeholder="Enter password"/></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td><input type="submit" name="submit" value="submit"/></td>
+						<td><input type="submit" name="submit" value="Login"/></td>
 					</tr>
 				</table>
 			</form>
@@ -82,7 +82,7 @@ if(isset($_SESSION['task4loggedin'])){
 if(isset($_SESSION['part1']) && !isset($_COOKIE['final']))
 echo "Now try logging into the admin panel!!";
    if(isset($_COOKIE['final'])){
-      echo "<br/> hooray!!, clear the logs to cover your track ;)";
+      echo "<br/> hooray!!, clear the logs ( in /files/logs/logs.txt ) to cover your track ;)";
    }
 ?>
 

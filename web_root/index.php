@@ -11,14 +11,18 @@
 
 
 $req_path = $_GET['query'];
-
 $routes = array("web/task1/"=>"/pages/web/task1/index.php",
 				"web/task2/"=>"/pages/web/task2/index.php",
 				"web/task3/"=>"/pages/web/task3/index.php",
 				"web/task4/"=>"/pages/web/task4/index.php",
+				"web/task4/addmail"=>"/pages/web/task4/requir/addmail.php",				
+				"web/task4/files/"=>"/pages/web/task4/files/",
+				"web/task4/files/downloads/"=>"/pages/web/task4/files/downloads/",
+				"web/task4/files/downloads/products.txt"=>"/pages/web/task4/files/downloads/products.txt",
+				"web/task4/files/logs/"=>"/pages/web/task4/files/logs/",
+				"web/task4/files/mailinglist/"=>"/pages/web/task4/files/mailinglist/",
 				"web/task4/login/"=>"/pages/web/task4/login.php",
 				"web/task4/logout/"=>"/pages/web/task4/logout.php",
-				"web/task4/subscribe/"=>"/pages/web/task4/subscribe.php",
 				"web/task4/products/"=>"/pages/web/task4/products.php",
 				"web/task5/"=>"/pages/web/task5/index.php",
 				"trivia/task1/"=>"/pages/trivia/task1/index.php",

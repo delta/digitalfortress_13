@@ -33,7 +33,7 @@ if(isset($_REQUEST['submit'])){
 			Username : <input type="text" name="user" /><br/>
 			Password : <input type="password" name="password" /><br/>
 			Company : <input type="text" name="company" /><br/>
-			<input type="submit" name="submit" value="submit"/>
+			<input type="submit" name="submit" value="Register"/>
 		</form>
    	</body>
 </html>
