@@ -1,10 +1,6 @@
 <?php
 if (isset($_REQUEST['submit'])) {
-	echo $_REQUEST['pass'] . "<br />";
-	echo $_POST['pass'] . "<br />";
-	$_POST['pass'] = "ABCDEF";
 	$string = $_REQUEST['pass'];
-	echo $_REQUEST['pass'] . "<br />";
 	for ($i = 0; $i < strlen($string); $i++) {
 		if ($i & 1) {
 			$string[$i] = chr(ord($string[$i]) + $i);
@@ -33,7 +29,7 @@ if (isset($_REQUEST['submit'])) {
 			You have access to the machine that encrypts the password
 		</p>
 		<p>
-			Derp's encrypted password is "asdfasdfafsdf"(quotes for clarity). His password is the answer for this level
+			Derp's encrypted password is "alskdjfhg"(quotes for clarity). His password is the answer for this level
 		</p>
 	</div>
 	<div align="center">
@@ -41,10 +37,10 @@ if (isset($_REQUEST['submit'])) {
 			<table>
 				<tr>
 					<td>
-					<input type="text" name="pass" />
+					<input type="text" name="pass" size="50"/>
 					</td>
 					<td>
-					<input type="submit" name="submit" value="submit"/>
+					<input type="submit" name="submit" value="submit" />
 					</td>
 				</tr>
 			</table>

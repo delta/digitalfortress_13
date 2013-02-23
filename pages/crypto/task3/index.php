@@ -2,12 +2,10 @@
 
 $polybius=array();
 
-for($i=0;$i<5;$i++)
-	for($j=0;$j<=5;$j++)$polybius[''.chr(ord('z')-$i*5-$j)]=''.$i.$j;
-
+print_r($polybius);
 if(isset($_REQUEST['submit'])){
 	$string = $_REQUEST['pass'];
-	$key = "thisisaverypoorpassword";
+	$key = "laskjdfhg";
 	$len = strlen($key);
 	$res = array();
 	for($i=0;$i<strlen($string);$i++){

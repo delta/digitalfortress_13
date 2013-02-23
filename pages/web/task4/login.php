@@ -1,4 +1,4 @@
-<?php	
+<?php
 if(isset($_REQUEST['submit'])){
   include "requir/config.php";
 	include "configs.php";
