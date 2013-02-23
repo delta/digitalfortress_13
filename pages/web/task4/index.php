@@ -2,7 +2,7 @@
 	if(isset($_REQUEST['final'])) setcookie("final","almost complete");
 	$hs  = "http://".$_SERVER['HTTP_HOST'];
 	$url   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-    $redirect = $hs.$url."?pages=";
+    $redirect = $hs."/web/task4/?pages=";
 	session_start();
 ?>
 <html>
@@ -13,13 +13,15 @@
 	<body>
 		<?php require_once "header.php";?>
 		<center>task4</center>
+		<p>hey i'm paramesh! i did intern in this company "Crappy" and developed a few apps. but in the end i got in bad terms with my team manager and he won't add me to final list of ppo but i built most part of the app. Can u please hack their site and add me to the list by accessing manager admin page. And also u hav to get the ceo admin panel and re-accept the list.. i hav left a loop hole in the admin md5 login panel. i dnt knw my manager's user name but his name is "Vignesh". All the BEst!! </p>
+
         <a href="<?php echo $redirect;?>home">HOME</a>
 		<a href="">SUBSCRIBE</a>
 		<a href="">PRODUCTS</a>
 
 <?php
 //print_r($_SESSION);
-if(isset($_SESSION["cookie"]) && ($_SESSION['task4loggedin']==1))
+if( isset($_SESSION['task4loggedin']) && ($_SESSION['task4loggedin']==1))
 {
 		   foreach($_SESSION['cookie'] as $key=>$value)
 		   setcookie("$key",$value);
@@ -36,9 +38,10 @@ if(isset($_SESSION['task4loggedin']) && $_SESSION['task4loggedin']==0){
 	setcookie("password","",time()-36000);
 	setcookie("manager","",time()-36000);
 	setcookie("final","",time()-36000);
+	session_destroy();
 }
 
-if(isset($_COOKIE["username"])||($_SESSION['task4loggedin'])){
+if(isset($_SESSION['task4loggedin'])){
 	if($_SESSION['cookie']["username"]  == "VIGNESH_DELTA"||$_COOKIE["username"] == "VIGNESH_DELTA"){
 ?>
          <a href="<?php echo $redirect;?>pmessage">PRIVATE MESSAGE</a>
@@ -49,7 +52,7 @@ if(isset($_COOKIE["username"])||($_SESSION['task4loggedin'])){
 <?php
 }
 ?>
-         <a href="logout.php">LOGOUT</a>
+         <a href="/web/task4/logout.php">LOGOUT</a>
 
 <?
 }else{
@@ -76,6 +79,8 @@ if(isset($_COOKIE["username"])||($_SESSION['task4loggedin'])){
 			</div>
 <?
 }
+if(isset($_SESSION['part1']) && !isset($_COOKIE['final']))
+echo "Now try logging into the admin panel!!";
    if(isset($_COOKIE['final'])){
       echo "<br/> hooray!!, clear the logs to cover your track ;)";
    }
