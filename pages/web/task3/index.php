@@ -24,16 +24,12 @@ if(isset($_COOKIE['user_url'])){
 		<?php require_once "header.php";?>
 		<div id="contents">
 			<center>Web-task-3</center>
-			<div id="question">Question question question question question question question question question question question
-				 question question question question question question question question question question question question question
-				  question question question question question question question question question question question question question
-				   question question question question question question question question question question question question
-		   </div>
+			<div id="question"></div>
 		   
 		   
 			<img src="<?php echo $url?>">
 			<?php 
-				if(isset($_COOKIE['user_url'])){
+				if(!isset($_COOKIE['user_url'])){
 					echo "U seem to b a new user";
 				}
 			?>
