@@ -13,6 +13,11 @@
 	.inline{
 		display:inline;
 	}
+	th,td {
+		padding:25px;
+		text-align:center;
+		height:30px;
+	}
 </style>
 <body>
 <?php
@@ -25,6 +30,7 @@
 
 	$c=0;
 	$score=0;
+	echo "<div align='center'>";
 	echo "<table style='text-align:center' border=1><thead><th>Category</th><th>Task1</th><th>Task2</th><th>Task3</th><th>Task4</th><th>Task5</th></thead><tbody>";
 	foreach($categories as $cat){
 		echo "<tr><td>$cat:</td>";
@@ -52,7 +58,7 @@
 		while($counter++<$maxtasks)echo "<td>---</td>";
 		echo "</tr>";
 	}
-	echo "</tbody></table>";
+	echo "</tbody></table></div>";
 	echo "<center><h5>Total Score: $score</h5></center>";
 ?>
 </body>

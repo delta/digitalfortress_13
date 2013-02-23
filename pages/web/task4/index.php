@@ -37,7 +37,7 @@ if(isset($_COOKIE["username"])){
 
 		<a href="<?php echo $redirect;?>register">REGISTER</a>
 			<div align="center">
-			<form method="get" action="login.php">
+			<form method="get" action="/web/task4/login/">
 				<table>
 					<tr>
 						<td><label for="user">Username : </label></td>
