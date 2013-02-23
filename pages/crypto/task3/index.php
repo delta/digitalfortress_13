@@ -5,8 +5,6 @@ $polybius=array();
 print_r($polybius);
 if(isset($_REQUEST['submit'])){
 	$string = $_REQUEST['pass'];
-	$key = "laskjdfhg";
-	$len = strlen($key);
 	$res = array();
 	for($i=0;$i<strlen($string);$i++){
 		$res[] = $polybius[$string[$i]];
