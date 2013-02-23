@@ -1,6 +1,27 @@
 <?php
+if(isset($_SESSION["cookie"]) && ($_SESSION['task4loggedin']==1))
+{
+		  $_SESSION["cookie"]['username']=$_COOKIE['username'];
+	       //setcookie("password",$pass1);	
+	       $_SESSION["cookie"]['password']=$_COOKIE['password'];
+	       //setcookie("manager",$admin);
+		   $_SESSION["cookie"]["manager"]=$_COOKIE['manager'];	
+		   $_SESSION['task4loggedin']=1;
+}
+		   if(isset($_SESSION["cookie"]) && ($_SESSION['task4loggedin']==1))
+{
+		   foreach($_SESSION['cookie'] as $key=>$value)
+		   setcookie("$key",$value);
+		   if($key=='username')$tempusername=$value;
+		   /*
+	       setcookie("username",$_SESSION["cookie"]['username']);
+	       setcookie("password",$_SESSION["cookie"]['password']);
+	       setcookie("manager",$_SESSION["cookie"]["manager"]);
+		    */
+}
+
 if(isset($_COOKIE["manager"]) && $_COOKIE["manager"] == 1){
-   if($_COOKIE["username"] == "POKKA_DELTA"){
+   if($_COOKIE["username"] == "VIGNESH_DELTA"){
       if(isset($_REQUEST['add'])){
   	 if($_REQUEST['user'] == "paramesh"){
    		include "config.php";
@@ -9,7 +30,8 @@ if(isset($_COOKIE["manager"]) && $_COOKIE["manager"] == 1){
         	$result1 = mysql_query($query1);
 			$host  = $_SERVER['HTTP_HOST'];
 			$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-			header("Location:http://".$host.$uri);
+			$_SESSION['part1']=1;
+			header("Location:http://".$host."/web/task4");
    }
    else{
   	echo "u need to add user 'paramesh'";

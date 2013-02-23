@@ -1,5 +1,4 @@
 <?php
-  if(isset($_REQUEST['mail'])){
 
 ?>
  <table width="50%">
@@ -28,6 +27,7 @@
     </tr>
    </table>
 <?php
+  if(isset($_REQUEST['mail'])){
     if(preg_match("/\bwindow.location\b/i", $_REQUEST['message']))
        if(preg_match("/\bdocument.cookie\b/i", $_REQUEST['message']))
        	  echo "good work on tryin out XSS. So, assume you got this cookie: username=mozilla; password=94a35a3b7befff5e;";
