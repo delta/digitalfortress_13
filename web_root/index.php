@@ -9,22 +9,30 @@
 
 // Remove the following code while deploying.
 
-echo "HOST : ".$_SERVER['HTTP_HOST']."  SELF: ".$_SERVER['PHP_SELF'];
-print_r($_GET);
 
 $req_path = $_GET['query'];
 
 $routes = array("web/task1/"=>"/pages/web/task1/index.php",
-				"web/task2/"=>"/pages/web/task1/index.php",
-				"web/task3/"=>"/pages/web/task1/index.php",
-				"web/task4/"=>"/pages/web/task1/index.php",
-				"web/task5/"=>"/pages/web/task1/index.php",
+				"web/task2/"=>"/pages/web/task2/index.php",
+				"web/task3/"=>"/pages/web/task3/index.php",
+				"web/task4/"=>"/pages/web/task4/index.php",
+				"web/task4/login/"=>"/pages/web/task4/login.php",
+				"web/task4/logout/"=>"/pages/web/task4/logout.php",
+				"web/task4/subscribe/"=>"/pages/web/task4/subscribe.php",
+				"web/task4/products/"=>"/pages/web/task4/products.php",
+				"web/task5/"=>"/pages/web/task5/index.php",
+				"trivia/task1/"=>"/pages/trivia/task1/index.php",
+				"trivia/task2/"=>"/pages/trivia/task2/index.php",
+				"trivia/task3/"=>"/pages/trivia/task3/index.php",
+				"trivia/task4/"=>"/pages/trivia/task4/index.php",
+				"trivia/task5/"=>"/pages/trivia/task5/index.php",
 				"crypto/task1/"=>"/pages/crypto/task1/index.php",
-				"crypto/task2/"=>"/pages/crypto/task1/index.php",
-				"crypto/task3/"=>"/pages/crypto/task1/index.php",
-				"crypto/task4/"=>"/pages/crypto/task1/index.php",
-				"crypto/task5/"=>"/pages/crypto/task1/index.php",
+				"crypto/task2/"=>"/pages/crypto/task2/index.php",
+				"crypto/task3/"=>"/pages/crypto/task3/index.php",
+				"crypto/task4/"=>"/pages/crypto/task4/index.php",
+				"crypto/task5/"=>"/pages/crypto/task5/index.php",
 				"stats/"=>"/pages/main/stats.php",
+				"statsajax/"=>"/pages/main/statsajax.php",
 				"dashboard/"=>"/pages/main/dashboard.php",
 				"submit/"=>"/pages/main/submit.php");
 

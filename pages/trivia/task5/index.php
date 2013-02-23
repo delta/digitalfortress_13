@@ -1,9 +1,15 @@
 <?php
 if(isset($_REQUEST['submit'])){
 	if(isset($_REQUEST['ans'])){
-		$ans = stripslashes($_REQUEST['ans']);
-		if(md5($ans)==="md5ans"){
-			$ans = "level password";
+		include "configs.php";
+		$ans = strtoupper(stripslashes($_REQUEST['ans']));
+		$flag =1;
+		
+		if(md5($ans)==="39a277385d320e7945ca033fa4001c1c" || md5($ans)==="04d02f247eb31523274ac4b9d1ddc6fe"){
+			$ans = $levelpass[1][4];
+		} else {
+			$flag = 0;
+			$ans = "wrong answer";
 		}
 	}
 }
@@ -11,20 +17,37 @@ if(isset($_REQUEST['submit'])){
 <html>
 	<head>
 		<title>title</title>
+		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>
-		<center>title</center>
-		Question for this round
-		<form method="get" action="">
-			<input type="text" name="ans" />
-			<input type="submit" name="submit" value="submit" />
-		</form>
-		<?php
-			if(isset($_REQUEST['ans'])){
-				echo $ans;
-			} else if(!isset($_REQUEST['ans'])){
-				echo "wrong ans";
-			}
-		?>
+		<?php require_once "header.php";?>
+		<div id="contents">
+			<center>Trivia-task-5</center>
+			<div id="question" align="center"><img src='/images/BGE-cover.jpg' style="border: solid 10px #ddd"/></div>
+			
+			<?php
+				if(isset($_REQUEST['ans']) && $flag){
+					echo "<br/><br/><div align='center' style='padding:10px 10px 50px 10px;'>LEVEL PASSWORD: ".$ans."</div>";
+				} else if(!isset($_REQUEST['ans']) || !$flag){
+					if(isset($_REQUEST['ans']))echo "<div align='center' class='center' style='padding-top: 20px 10px 20px 10px;'>Wrong ans</div>";
+					?>
+			<div align="center">
+				<form action="" method="get" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td><label for="ans">Your answer : </label></td>
+							<td><input type="text" name="ans" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" name="submit" value="submit" /></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<?php
+				}
+			?>
+		</div>
 	</body>
 </html>
