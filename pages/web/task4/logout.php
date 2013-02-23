@@ -7,5 +7,6 @@ setcookie("final","",time()-3600);
 
 			$host  = $_SERVER['HTTP_HOST'];
 			$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-			header("Location:http://".$host.$uri);
+			//header("Location:http://".$host.$uri);
+			header("Location:http://".$host."/web/task4/");
 ?>

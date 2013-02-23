@@ -5,6 +5,8 @@
 			$pass="mpwn4GhBqR7LmzjU";
 			$task1user="task1";
 			$task1password="aqUGHGeXqrjtuEVj";
+			$task4user="task4";
+			$task4password="aqUGHGeXqrjtuEVj";
 			$user_table="users";
 			$score_table="scores";
 			$ans_table="ans";
