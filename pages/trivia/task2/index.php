@@ -2,10 +2,11 @@
 //ans is INTENSIONALPROGRAMMING
 if(isset($_REQUEST['submit'])){
 	if(isset($_REQUEST['ans'])){
-		$ans = stripslashes($_REQUEST['ans']);
+		include "configs.php";
+		$ans = strtoupper(stripslashes($_REQUEST['ans']));
 		$flag =1;
 		if(md5($ans)==="a447664b6e419c06808e3bd64ba26fde"){
-			$ans = "level password";
+			$ans = $levelpass[1][1];
 		} else {
 			$flag = 0;
 			$ans = "wrong answer";

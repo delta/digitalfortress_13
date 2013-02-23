@@ -1,11 +1,12 @@
 <?php
-//ans is YAHOOQUEYLANGUAGE
+//ans is YAHOOQUERYLANGUAGE
 if(isset($_REQUEST['submit'])){
 	if(isset($_REQUEST['ans'])){
+		include "configs.php";
 		$ans = strtoupper(stripslashes($_REQUEST['ans']));
 		$flag =1;
 		if(md5($ans)=="777da8677e2b35077c6143ef78b26335" || md5($ans)=="1a0c1b56e9d617688ee345da4030da3c"){
-			$ans = "level password";
+			$ans = $levelpass[1][0];
 		} else {
 			$flag = 0;
 			$ans = "wrong answer";
