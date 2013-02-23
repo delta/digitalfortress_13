@@ -10,7 +10,6 @@
 	if(isset($_REQUEST['submit'])){
 		$string = strtoupper($_REQUEST['pass']);
 		$keystring = "FLOWER";
-		$ans="yxsmpjguavpazhe";
 		$key=array();
 		
 		for($i=0;$i<strlen($string);$i++)$key[]=$keystring[$i%6];
