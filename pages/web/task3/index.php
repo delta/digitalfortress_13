@@ -1,5 +1,5 @@
 <?php
-	
+
 if(isset($_POST['submit'])){
 	if($_FILES['file']['error']==0){
 		$filename = sha1(mt_rand());
