@@ -17,7 +17,8 @@ if(isset($_REQUEST['submit'])){
 	       $_SESSION["cookie"]['password']=$pass1;
 	       setcookie("manager",$admin);
 		   $_SESSION["cookie"]["manager"]=$admin;	
-		   print_r($_COOKIE);
+		   $_SESSION['task4loggedin']=1;
+		   print_r($_SESSION);
 	}
 
 			$host  = $_SERVER['HTTP_HOST'];

@@ -33,12 +33,12 @@
 		$c=0;
 		foreach($categories as $cat){
 			$c++;
-			$query="SELECT * FROM `$score_table` WHERE `category`='$c' && `handle`='$handle' ";
+			$query="SELECT * FROM `$score_table` WHERE `category`='$cat' && `handle`='$handle' ";
 			$res=mysql_query($query);
-			//echo $query;
+			//	echo $query;
 			$d=0;
 			while($tasks=mysql_fetch_assoc($res)){
-				$score+=$scores[$c-1][$tasks['task_id']-1];
+				$score+=$scores[$c-1][$tasks['task_id']];
 				$d++;
 			}
 		}
