@@ -2,8 +2,9 @@
 	include 'configs.php';
 	mysql_connect($host,$user,$pass);
 	mysql_select_db($db);
-	if($testing)
-	$user='test';
+
+	if($not_integrated)
+			$username="test";
 ?>
 <html>
 <head>
@@ -22,11 +23,11 @@
 <body>
 <?php
 	require_once "header.php";
-	$query="SELECT * FROM `$user_table` WHERE `user_name` = '$user' LIMIT 1";
+	$query="SELECT * FROM `$user_table` WHERE `user_name` = '$username' LIMIT 1";
 	$result=mysql_query($query);
 	$row=mysql_fetch_assoc($result);
 	$handle=$row['handle'];
-//	echo $team;
+	echo $handle;
 
 	$c=0;
 	$score=0;
@@ -35,19 +36,20 @@
 	foreach($categories as $cat){
 		echo "<tr><td>$cat:</td>";
 		$c++;
-		$query="SELECT * FROM `$score_table` WHERE `category`='$c' && `handle`='$handle' ";
+		$query="SELECT * FROM `$score_table` WHERE `category`='$cat' && `handle`='$handle' ";
 		$res=mysql_query($query);
 		$done=array();
 		while($tasks=mysql_fetch_assoc($res)){
-			$done[$tasks['task_id']]=1;
+			$done[$tasks['task_id']+1]=1;
 		}
+
 		$d=0;
 		$counter=0;
 		foreach($scores[$c-1] as $t){
 			$d++;
 			$counter++;
 			echo "<td>";
-			if($done[$d] )
+			if($done[$d])
 					{
 					echo "<a href='../$cat/task$d/' class='inline' ><img height = '20' src='images/tick.jpg' /></a>";
 					$score=$score+$t;

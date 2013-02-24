@@ -2,7 +2,7 @@
   if(isset($_COOKIE["username"]) && isset($_COOKIE["password"])){
 
 ?>
-
+		<img src="/images/manage.php.jpg" width="100" height="100">
 		<form method="post" action="">
 			Username : <input type="text" name="get_user" /><br/>
 			<input type="submit" name="submit" value="submit"/>

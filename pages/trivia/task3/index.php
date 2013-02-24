@@ -2,10 +2,11 @@
 //ans is TORUSINTERCONNECT
 if(isset($_REQUEST['submit'])){
 	if(isset($_REQUEST['ans'])){
-		$ans = stripslashes($_REQUEST['ans']);
+		include "configs.php";
+		$ans = strtoupper(stripslashes($_REQUEST['ans']));
 		$flag =1;
 		if(md5($ans)==="17fc663f850af56b09cfa20b56884f8f"){
-			$ans = "level password";
+			$ans = $levelpass[1][2];
 		} else {
 			$flag = 0;
 			$ans = "wrong answer";

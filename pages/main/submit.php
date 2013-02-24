@@ -1,11 +1,13 @@
-<?php $testing = 1;
+<?php $testing = 0;
+//echo md5("6997bef1dc19b9ef4b3ed4a149651afe");
 if ($testing || isset($_REQUEST['submit'])) {
 	if ($testing || isset($_REQUEST['category']) && isset($_REQUEST['task'])) {
+		$catarray=array("crypto","web","reverse","trivia");
 		if ($testing || $_REQUEST['category'] <= 5 && $_REQUEST['category'] > 0 && $_REQUEST['task'] <= 5 && $_REQUEST['task'] > 0) {
 			$cat = htmlentities($_REQUEST['category'], ENT_QUOTES);
+			$cat = $catarray[$cat-1];
 			$task = htmlentities($_REQUEST['task'], ENT_QUOTES);
 			$ans = md5(htmlentities($_REQUEST['ans'], ENT_QUOTES));
-
 			include "configs.php";
 			mysql_connect($host, $user, $pass);
 			mysql_select_db($db);
@@ -16,8 +18,10 @@ if ($testing || isset($_REQUEST['submit'])) {
 				$ans = md5("hello");
 				$username = "test";
 			}
-			$query = "SELECT * FROM `$ans_table` where `category`='{$cat}' AND `task`='" . substr($task, 4) . "' AND `ans`='{$ans}'";
-
+			if($not_integrated)
+			$username="testhandle";
+			$query = "SELECT * FROM `$ans_table` where `category`='{$cat}' AND `task`='" . $task . "' AND `ans`='{$ans}'";
+	//		echo $query;
 			$result = mysql_query($query);
 			//echo $query.'<br />';
 			if (mysql_num_rows($result) > 0) {
@@ -28,10 +32,10 @@ if ($testing || isset($_REQUEST['submit'])) {
 				 $row   = mysql_fetch_assoc($res);
 				 */
 				//$username=$row['team'];
-				$query = "INSERT IGNORE INTO `{$score_table}`(`handle`,`task_id`,`category`) VALUES('$username','" . substr($task, 4) . "','$cat')";
-				echo $query;
+				$query = "INSERT IGNORE INTO `{$score_table}`(`handle`,`task_id`,`category`) VALUES('$username','" . ($task-1) . "','$cat')";
+				//echo $query;
 				$result = mysql_query($query) or die("Error updating score.Contact admin");
-				echo "<br /><h3>User : $username <br />Team : $team<br />Task : $cat $task <br /> Submitted Successfully</h3>";
+				echo "<br /><h3>User : $username <br />Task : $cat -- Task $task <br /> Submitted Successfully</h3>";
 			} else
 				"Wrong Password";
 

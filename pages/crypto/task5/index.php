@@ -6,7 +6,6 @@
 	
 	if(isset($_REQUEST['submit'])){
 		$string = strtoupper($_REQUEST['pass']);
-		$ans=strtoupper("ifyoucancrackthisyouwin");
 		$x=0;
 		
 		for($i=0;$i<strlen($string);$i++){

@@ -1,10 +1,12 @@
 <?php
 if(isset($_REQUEST['submit'])){
 	if(isset($_REQUEST['ans'])){
-		$ans = stripslashes($_REQUEST['ans']);
+		include "configs.php";
+		$ans = strtoupper(stripslashes($_REQUEST['ans']));
 		$flag =1;
+		
 		if(md5($ans)==="39a277385d320e7945ca033fa4001c1c" || md5($ans)==="04d02f247eb31523274ac4b9d1ddc6fe"){
-			$ans = "level password";
+			$ans = $levelpass[1][4];
 		} else {
 			$flag = 0;
 			$ans = "wrong answer";
