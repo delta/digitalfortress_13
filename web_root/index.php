@@ -9,7 +9,8 @@
 
 // Remove the following code while deploying.
 
-
+include "configs.php";
+session_save_path($session_save_path);
 $req_path = $_GET['query'];
 $routes = array("web/task1/"=>"/pages/web/task1/index.php",
 				"web/task2/"=>"/pages/web/task2/index.php",
