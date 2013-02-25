@@ -20,6 +20,11 @@ die("Please Login at <a href='http://www.pragyan.org'>Pragyan</a> to Enter the e
 }
 else
 {
+	// Should link $user_name;
+	//			   $handle;
+	//			   $pid;
+$query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')";
+// 			mysql_query($query);
 
 }
 ?>

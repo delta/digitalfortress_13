@@ -1,8 +1,8 @@
 <?php
 			$host="localhost";
-			$db  ="digitalfortress";
-			$user="digitalfortress";
-			$pass="mpwn4GhBqR7LmzjU";
+			$db  ="ctf";
+			$user="ctf";
+			$pass="Capture!!!";
 			$task1user="task1";
 			$task1password="task1pass";
 			$task4user="task4";
