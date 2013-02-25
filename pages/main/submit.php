@@ -1,4 +1,4 @@
-<?php $testing = 0;
+<?php 
 //echo md5("6997bef1dc19b9ef4b3ed4a149651afe");
 if ($testing || isset($_REQUEST['submit'])) {
 	if ($testing || isset($_REQUEST['category']) && isset($_REQUEST['task'])) {

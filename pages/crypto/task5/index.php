@@ -5,7 +5,7 @@
 	$flag=1;
 	
 	if(isset($_REQUEST['submit'])){
-		$string = strtoupper($_REQUEST['pass']);
+		$string = ($_REQUEST['pass']);
 		$x=0;
 		
 		for($i=0;$i<strlen($string);$i++){
@@ -19,9 +19,11 @@
 			else $x--;
 		}
 		$string1 = "";
-		for($j=0;$j<$railno;$j++){
+		for($j=0;$j<$railno;$j++)
+		{
 			$string1.=" ";
-			for($i=0;$i<strlen($string);$i++){
+			for($i=0;$i<strlen($string);$i++)
+			{
 				if($rail[$i][$j]!="$")
 				$string1 .= $rail[$i][$j];
 			}
@@ -46,7 +48,7 @@ Derp	: Challenge Accepted.
 Derpina	: I never challenged you, but anyways can you do this ? Quit when you can.
 Derp	: I said Challenge Accepted so it will be accomplished.
 Derpina	: I will even give you my encrypted string.Yeah,you heard it right no need to hack my database
-          this time. It is "<b>IAKO FCNCTYU YUCAHSWN ORII</b>" and I used rail fence for it.
+          this time. It is "<b>iako fcnctyu yucahswn orii</b>" (quotes & spaces for clarity) and I used rail fence for it.
           You keep talking. I had a big day today at the shop, I'm off to sleep
 			</pre>
 		      </p>

@@ -32,7 +32,7 @@ if (isset($_REQUEST['submit'])) {
 			You have found the encrypted password. You have access to the machine that encrypts the password
 		</p>
 		<p>
-			Derps encrypted password is "0$!431?"#"(quotes for clarity). The key concatenated with the password is the answer for this level
+			<pre style='font-family: Verdana, Geneva, sans-serif'>Derps encrypted password is      0$!431?"#    . The key concatenated with the password is the answer for this level.</pre>
 		</p>
 	</div>
 	<div align="center">

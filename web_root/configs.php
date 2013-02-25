@@ -4,7 +4,7 @@
 			$user="digitalfortress";
 			$pass="mpwn4GhBqR7LmzjU";
 			$task1user="task1";
-			$task1password="aqUGHGeXqrjtuEVj";
+			$task1password="task1pass";
 			$task4user="task4";
 			$task4password="aqUGHGeXqrjtuEVj";
 			$user_table="users";

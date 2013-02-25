@@ -43,7 +43,7 @@ if(isset($_REQUEST['submit'])){
 			<center>Crypto-task-3</center>
 			<div id="question">
 				<p>Derpina is too weak at remembering password so she used a weak encryption using only alphabetic characters .<br >
-				Derp, the hacker found out Derpina's encrypted password to be "<b>1133321232124504411301202121132045121203211342</b>" (quotes for clarity) and he guesses that Derpina uses polybius encryption.But Derpina is known for doing things in reverse, so help Derp to decrypt her password as it is the password for this level.      </p>
+				Derp, the hacker found out Derpina's encrypted password to be "<b>1132311231124404401301202121132044121203211341</b>" (quotes for clarity) and he guesses that Derpina uses polybius encryption.But Derpina is known for doing things in reverse, so help Derp to decrypt her password as it is the password for this level.      </p>
 			</div>
 			<div align="center">
 				<form method="get" action="">
