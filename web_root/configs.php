@@ -11,6 +11,7 @@
 			$score_table="scores";
 			$ans_table="ans";
 			$session_save_path="/";
+			$LOGGED_IN=1;
 			
 			$testing=0;								// Should make this zero while deploying
 			$not_integrated=1;								// Should make this zero while deploying

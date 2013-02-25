@@ -12,3 +12,14 @@
 
 			</pre>                                                                                  
 		</a></div>
+<?php
+if($LOGGED_IN!=1)
+{
+echo "<script>alert('Please Login at Pragyan to start hacking');window.location='http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login';</script>";
+die("Please Login at <a href='http://www.pragyan.org'>Pragyan</a> to Enter the event.<a href='http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login' > LOGIN </a>");
+}
+else
+{
+
+}
+?>
