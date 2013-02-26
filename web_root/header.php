@@ -13,6 +13,7 @@
 			</pre>                                                                                  
 		</a></div>
 <?php
+$LOGGED_IN='';
 if($LOGGED_IN!=1)
 {
 echo "<script>alert('Please Login at Pragyan to start hacking');window.location='http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login';</script>";
@@ -20,7 +21,7 @@ die("Please Login at <a href='http://www.pragyan.org'>Pragyan</a> to Enter the e
 }
 else
 {
-	// Should link $user_name;
+	// Should link 		$user_name;
 	//			   $handle;
 	//			   $pid;
 $query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')";
