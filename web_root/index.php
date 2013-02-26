@@ -26,8 +26,10 @@ ini_set('session.gc_maxlifetime', $garbage_timeout);
 include "configs.php";
 
 if(!isset($_SESSION['userId'])){
-	die("not logged in");
+	header("Location: http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login");
 }
+print_r($_SESSION);
+
 $req_path = $_GET['query'];
 $routes = array("web/task1/"=>"/pages/web/task1/index.php",
 				"web/task2/"=>"/pages/web/task2/index.php",
