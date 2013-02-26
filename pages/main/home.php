@@ -6,11 +6,10 @@
 	<body>
 		<?php require_once "header.php";?>
 		<div id="content">
-			<p>Greetings!!! Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text  
-				Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text 
-				Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text 
-				Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text Some_text </p>
-			<div>Link to irc channel</div>
+			<p>Welcome to Digital Fortress.This event is comprised of 2 rounds.The first round is scheduled on 26th February.
+				The First round consists of three Categories - Web, Trivia, Crypto.Order of solving the tasks in each of these
+				Category is not necessary.</p>
+			<div>Join irc channel- #digital_fortress @ freenode.net</div>
 			<div>link to <a href="/stats">stats page</a></div>
 			<div>link to <a href="/dashboard">questions</a></div>
 			<div>link to <a href="/submit">submit page</a></div>

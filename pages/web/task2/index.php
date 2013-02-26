@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Web-Task 2</title>
+<title>Task2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="robots" content="noindex" />
 <link rel="stylesheet" href="/css/template.css" type="text/css"/>
@@ -14,7 +14,7 @@
 	<?php include "header.php";?>
 <center>task2</center>
 <?php
- if(isset($_REQUEST['user']) && isset($_REQUEST['key']))
+ if(isset($_REQUEST['user']) && isset($_REQUEST['key']) && isset($_REQUEST['submit']))
  header('Location : ./oldindex.php');
         
    if(isset($_REQUEST['won'])||1)
