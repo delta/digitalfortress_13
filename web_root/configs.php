@@ -1,8 +1,8 @@
 <?php
 			$host="localhost";
-			$db  ="ctf";
-			$user="ctf";
-			$pass="Capture!!!";
+			$db  ="digitalfortress";
+			$user="paramesh";
+			$pass="pass";
 			$task1user="task1";
 			$task1password="task1pass";
 			$task4user="task4";
@@ -11,7 +11,7 @@
 			$score_table="scores";
 			$ans_table="ans";
 			$session_save_path="/";
-			$LOGGED_IN=1;
+			//$LOGGED_IN=1;
 			
 			$testing=0;								// Should make this zero while deploying
 			$not_integrated=1;								// Should make this zero while deploying

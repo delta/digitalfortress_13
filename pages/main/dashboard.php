@@ -8,6 +8,7 @@
 ?>
 <html>
 <head>
+		<title>Digital Fortress - Dashboard</title>
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 </head>
 <style>

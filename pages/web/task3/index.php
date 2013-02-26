@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
 
 <html>
 	<head>
-		<title></title>
+		<title>Web-Task 3</title>
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>

@@ -8,7 +8,7 @@
 
 <html>
 <head>
-<title>Task2</title>
+<title>Web-Task 2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="robots" content="noindex" />
 

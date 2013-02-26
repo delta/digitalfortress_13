@@ -20,6 +20,8 @@ if ($testing || isset($_REQUEST['submit'])) {
 			}
 			if($not_integrated)
 			$username="testhandle";
+			else
+			$username=$handle;
 			$query = "SELECT * FROM `$ans_table` where `category`='{$cat}' AND `task`='" . $task . "' AND `ans`='{$ans}'";
 	//		echo $query;
 			$result = mysql_query($query);
@@ -45,7 +47,7 @@ if ($testing || isset($_REQUEST['submit'])) {
 ?>
 <html>
 	<head>
-		<title></title>
+		<title>Digital Fortress-Submit</title>
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>

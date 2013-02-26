@@ -12,7 +12,7 @@ if (isset($_REQUEST['submit'])) {
 ?>
 <html>
 	<head>
-		<title></title>
+		<title>Crypto-Task 1</title>
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>

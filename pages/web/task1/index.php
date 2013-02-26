@@ -19,7 +19,7 @@ if(isset($_REQUEST['submit'])){
 
 <html>
 	<head>
-		<title>Welcome to the CTF!</title>
+		<title>Web-Task 1</title>
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>
