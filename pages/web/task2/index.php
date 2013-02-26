@@ -1,14 +1,14 @@
 <?php
- if(isset($_REQUEST['user']) && isset($_REQUEST['key']))
- header('Location : ./oldindex.php');
-        
+ if(isset($_REQUEST['user']) && isset($_REQUEST['key']) && isset($_REQUEST['submit'])) {
+   header('Location: http://localhost/task2/oldindex.php');    
+   }
    if(isset($_REQUEST['won']))
      echo "congrats ! admin token : "  ; 
 ?>
 
 <html>
 <head>
-<title>Web-Task 2</title>
+<title>Task2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="robots" content="noindex" />
 
