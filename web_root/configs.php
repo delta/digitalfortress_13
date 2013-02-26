@@ -20,8 +20,8 @@
 			$maxtasks=5;
 			$scores=array(
 					array(100,200,300,400),
-					array(100,200,300,400,500),
-					array(100,200,300,400,500)
+					array(100,200,300,300,300),
+					array(100,200,300,300,300)
 				     );
 			$levelpass=array(
 					array("729c198b0cf9571deedfe3176787e40d","eeb13ced4c1a7855f153510248a7fa00","33cd69c166241bb2632a905f427f4676","2b3fe0cf751bd39ee0a88a65ea9a7332"),	//cf56c47e6f561f575d4f277ca069cb32		// Web
