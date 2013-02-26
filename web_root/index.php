@@ -31,15 +31,16 @@ if(!isset($_SESSION['userId'])){
 
 $pid=$_SESSION['userID'];
 
-$connection= mysql_connect("localhost",$user,$pass);
-mysql_select_db("pragyan13_cms");
+$connection= mysql_connect("localhost",$user,$pass) or die(mysql_error());
+mysql_select_db("pragyan13_cms")  or die(mysql_error());
 $query = "SELECT * FROM `pragyan13_cms`.`pragyanV3_users` WHERE `user_id`='{$pid}' LIMIT 1";
-$result = mysql_query($query);
+$result = mysql_query($query)  or die(mysql_error());
 
 if(mysql_num_rows($result)){
 	$res = mysql_fetch_assoc($result);
 	print_r($res);
 }
+mysql_close($connection);
 			
 print_r($_SESSION);
 
