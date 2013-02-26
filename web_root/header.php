@@ -13,7 +13,7 @@
 			</pre>                                                                                  
 		</a></div>
 <?php
-$LOGGED_IN='';
+$LOGGED_IN=1;
 if($LOGGED_IN!=1)
 {
 echo "<script>alert('Please Login at Pragyan to start hacking');window.location='http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login';</script>";

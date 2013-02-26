@@ -7,7 +7,7 @@
 ?>
 <html>
 	<head>
-		<title>Crappy SIte</title>
+		<title>Web-Task4-Crappy SIte</title>
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>		
 	</head>
 	<body>

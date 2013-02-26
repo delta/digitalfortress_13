@@ -4,6 +4,7 @@
 	$_SESSION['stats_sort']=$_POST['sort'];
 ?>
 <html>
+	<title>Digital Fortress-Stats</title>
 	<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	<script src="/js/jquery.js"></script>
 	<script>
