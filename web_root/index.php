@@ -42,10 +42,9 @@ if(mysql_num_rows($result)){
 mysql_close($connection);
 
 
-$user_name = $res["full_name"];
+$user_name = $res["user_fullname"];
 $handle = $res['user_name'];
 $query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')" or die(mysql_error());
-echo $query;
 $connection = mysql_connect("localhost",$user,$pass) or die(mysql_error());
 mysql_select_db("ctf")  or die(mysql_error());
 mysql_query($query) or die(mysql_error());
