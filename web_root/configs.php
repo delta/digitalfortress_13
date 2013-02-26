@@ -1,12 +1,12 @@
 <?php
 			$host="localhost";
-			$db  ="digitalfortress";
-			$user="paramesh";
-			$pass="pass";
+			$db  ="ctf";
+			$user="ctf";
+			$pass="Capture!!!";
 			$task1user="task1";
 			$task1password="task1pass";
 			$task4user="task4";
-			$task4password="aqUGHGeXqrjtuEVj";
+			$task4password="";
 			$user_table="users";
 			$score_table="scores";
 			$ans_table="ans";

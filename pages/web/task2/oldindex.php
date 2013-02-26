@@ -26,7 +26,7 @@
        }
    });
   }else{
-    window.location = "index.php?user="+u+"&key="+k+"&submit=login";
+    window.location = "index.php?user="+u+"&key="+k+"&sub=log";
   }
 
 </script>
