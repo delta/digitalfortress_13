@@ -1,6 +1,11 @@
 <?php
+ if(isset($_REQUEST['user']) && isset($_REQUEST['key']))
+ header('Location : ./oldindex.php');
         
+   if(isset($_REQUEST['won']))
+     echo "congrats ! admin token : "  ; 
 ?>
+
 <html>
 <head>
 <title>Web-Task 2</title>
@@ -14,15 +19,33 @@
 </head>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
 <body bgcolor="#FFFFFF">
-
-<h2>"HEY" </h2>
-<p><b>"hello" </b> <span><?php echo $_REQUEST['a'];?></span></p><p><<span><?php echo $_REQUEST['b'];?></span></p>
-    
-<p>&nbsp;</p>
-
+<center>task2</center>
+		<p>hey ,Derp here again! i threw a bet at my friend that i would find vulnerability in his website, but i am not able to find one. he would give me admin access token if i find it. Can u find any? </p>
+<?php
+if(isset($_REQUEST['user']) && isset($_REQUEST['key'])){
+?>
+<p><b>"hello" </b> <span><?php echo $_REQUEST['user'];?></span></p>
+<p><span><?php echo $_REQUEST['key'];?></span> u r not an admin</p>
+<?php
+}
+?>  
+			<div align="center">
+			<form method="get" action="">
+				<table>
+					<tr>
+						<td><label for="user">Username : </label></td>
+						<td><input type="text" name="user" placeholder="Enter Username"/></td>
+					</tr>
+					<tr>
+						<td><label for="user">key : </label></td>
+						<td><input type="password" name="key" placeholder="Secret Key"/></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" name="submit" value="Login"/></td>
+					</tr>
+				</table>
+			</form>
+			</div>
 </body>
-<script>
- window.location = "http://delta.nitt.edu/~robo/task2/oldindex.php"; 
-</script>
 </html>
-
