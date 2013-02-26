@@ -24,7 +24,7 @@
 	$c=0;
 	$score_by_name=array();
 	$score_by_value=array();
-	$query="SELECT DISTINCT `handle` FROM  `users`";
+	$query="SELECT DISTINCT `handle` FROM  `users` WHERE `pid` != '0' ";
 	$result=mysql_query($query);
 	echo mysql_error();
 	while($row=mysql_fetch_assoc($result)){
