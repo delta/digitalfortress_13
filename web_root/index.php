@@ -10,7 +10,6 @@
 // Remove the following code while deploying.
 
  
-include "configs.php";
 
 ini_set("use_cookies",1);
 ini_set("use_only_cookies",1);
@@ -24,7 +23,11 @@ ini_set('session.gc_probability', 1);
 session_set_cookie_params($cookie_timeout, $cookie_path);
 ini_set('session.gc_maxlifetime', $garbage_timeout);
 
+include "configs.php";
 
+if(!isset($_SESSION['userId'])){
+	die("not logged in");
+}
 $req_path = $_GET['query'];
 $routes = array("web/task1/"=>"/pages/web/task1/index.php",
 				"web/task2/"=>"/pages/web/task2/index.php",
