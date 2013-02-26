@@ -33,7 +33,7 @@
 ?>
 <html>
 	<head>
-		<title></title>
+		<title>Crypto-Task 5</title>
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>

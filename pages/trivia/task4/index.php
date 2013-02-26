@@ -16,7 +16,7 @@ if(isset($_REQUEST['submit'])){
 ?>
 <html>
 	<head>
-		<title>title</title>
+		<title>Trivia-Task 4</title>
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>

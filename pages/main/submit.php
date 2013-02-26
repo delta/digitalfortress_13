@@ -47,7 +47,7 @@ if ($testing || isset($_REQUEST['submit'])) {
 ?>
 <html>
 	<head>
-		<title></title>
+		<title>Digital Fortress-Submit</title>
 		<link rel="stylesheet" href="/css/template.css" type="text/css"/>
 	</head>
 	<body>

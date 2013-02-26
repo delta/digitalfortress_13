@@ -24,7 +24,6 @@ ini_set('session.gc_probability', 1);
 session_set_cookie_params($cookie_timeout, $cookie_path);
 ini_set('session.gc_maxlifetime', $garbage_timeout);
 
-session_save_path($session_save_path);
 
 $req_path = $_GET['query'];
 $routes = array("web/task1/"=>"/pages/web/task1/index.php",
