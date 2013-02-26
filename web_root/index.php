@@ -44,8 +44,11 @@ mysql_close($connection);
 
 $user_name = $res["full_name"];
 $handle = $res['user_name'];
-$query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')";
-mysql_query($query);
+$query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')" or die(mysql_error());
+echo $query;
+$connection = mysql_connect("localhost",$user,$pass) or die(mysql_error());
+mysql_select_db("ctf")  or die(mysql_error());
+mysql_query($query) or die(mysql_error());
 
 
 
