@@ -29,7 +29,7 @@ if(!isset($_SESSION['userId'])){
 	header("Location: http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login");
 }
 
-$pid=$_SESSION['userID'];
+$pid=$_SESSION['userId'];
 
 $connection= mysql_connect("localhost",$user,$pass) or die(mysql_error());
 mysql_select_db("pragyan13_cms")  or die(mysql_error());
@@ -40,6 +40,7 @@ $result = mysql_query($query)  or die(mysql_error());
 if(mysql_num_rows($result)){
 	$res = mysql_fetch_assoc($result);
 	print_r($res);
+	echo "getting inside";
 }
 mysql_close($connection);
 			
