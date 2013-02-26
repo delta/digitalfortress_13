@@ -31,8 +31,22 @@ if(!isset($_SESSION['userId'])){
 
 $pid=$_SESSION['userID'];
 
+$connection= mysql_connect("localhost",$user,$pass);
+mysql_select_db("pragyan13_cms");
+$query = "SELECT * FROM `pragyan13_cms`.`pragyanV3_users` WHERE `user_id`='{$pid}' LIMIT 1";
+$result = mysql_query($query);
+
+if(mysql_num_rows($result)){
+	$res = mysql_fetch_assoc($result);
+	print_r($res);
+}
+			
+print_r($_SESSION);
+
 $query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')";
 mysql_query($query);
+
+
 
 $req_path = $_GET['query'];
 $routes = array("web/task1/"=>"/pages/web/task1/index.php",
