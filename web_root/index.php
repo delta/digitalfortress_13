@@ -39,13 +39,12 @@ $result = mysql_query($query)  or die(mysql_error());
 
 if(mysql_num_rows($result)){
 	$res = mysql_fetch_assoc($result);
-	print_r($res);
-	echo "getting inside";
 }
 mysql_close($connection);
-			
-print_r($_SESSION);
 
+
+$user_name = $res["full_name"];
+$handle = $res['user_name'];
 $query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')";
 mysql_query($query);
 

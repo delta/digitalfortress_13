@@ -6,6 +6,9 @@
 	<body>
 		<?php require_once "header.php";?>
 		<div id="content">
+			<?php
+				echo "Welcome ".$handle;
+			?><br/><br/>
 			<p>Welcome to Digital Fortress.This event is comprised of 2 rounds.The first round is scheduled on 26th February.
 				The First round consists of three Categories - Web, Trivia, Crypto.Order of solving the tasks in each of these
 				Category is not necessary.</p>
