@@ -17,7 +17,7 @@
  if(isset($_REQUEST['user']) && isset($_REQUEST['key']) && isset($_REQUEST['submit']))
  header('Location : ./oldindex.php');
         
-   if(isset($_REQUEST['won'])||1)
+   if(isset($_REQUEST['won']))
      {
      	include "configs.php";
      	echo "congrats ! admin token : ".$levelpass[0][1]." ;"  ;
