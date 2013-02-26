@@ -9,8 +9,23 @@
 
 // Remove the following code while deploying.
 
+ 
 include "configs.php";
+
+ini_set("use_cookies",1);
+ini_set("use_only_cookies",1);
+$cookie_path = "/";
+$cookie_timeout = 60 * 30;
+$garbage_timeout = $cookie_timeout + 300;
+ini_set('session.name',"PHPSESSID");
+ini_set('session.cookie_domain','.pragyan.org');
+ini_set("session.save_path", "/var/www/html/13/cms/uploads/sessions");
+ini_set('session.gc_probability', 1);
+session_set_cookie_params($cookie_timeout, $cookie_path);
+ini_set('session.gc_maxlifetime', $garbage_timeout);
+
 session_save_path($session_save_path);
+
 $req_path = $_GET['query'];
 $routes = array("web/task1/"=>"/pages/web/task1/index.php",
 				"web/task2/"=>"/pages/web/task2/index.php",
