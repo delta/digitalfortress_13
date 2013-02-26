@@ -34,6 +34,7 @@ $pid=$_SESSION['userID'];
 $connection= mysql_connect("localhost",$user,$pass) or die(mysql_error());
 mysql_select_db("pragyan13_cms")  or die(mysql_error());
 $query = "SELECT * FROM `pragyan13_cms`.`pragyanV3_users` WHERE `user_id`='{$pid}' LIMIT 1";
+echo $query;
 $result = mysql_query($query)  or die(mysql_error());
 
 if(mysql_num_rows($result)){
