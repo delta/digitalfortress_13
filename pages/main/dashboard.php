@@ -23,8 +23,9 @@
 </style>
 <body>
 <?php
+	
 	require_once "header.php";
-	$query="SELECT * FROM `$user_table` WHERE `user_name` = '$username' LIMIT 1";
+	$query="SELECT * FROM `$user_table` WHERE `user_name` = '$user_name' LIMIT 1";
 	$result=mysql_query($query);
 	$row=mysql_fetch_assoc($result);
 	$handle=$row['handle'];
