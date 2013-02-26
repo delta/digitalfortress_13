@@ -14,7 +14,7 @@
 			//$LOGGED_IN=1;
 			
 			$testing=0;								// Should make this zero while deploying
-			$not_integrated=1;								// Should make this zero while deploying
+			$not_integrated=0;								// Should make this zero while deploying
 			
 			$categories=array("web","trivia","crypto");
 			$maxtasks=5;
