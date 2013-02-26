@@ -28,7 +28,11 @@ include "configs.php";
 if(!isset($_SESSION['userId'])){
 	header("Location: http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login");
 }
-print_r($_SESSION);
+
+$pid=$_SESSION['userID'];
+
+$query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')";
+mysql_query($query);
 
 $req_path = $_GET['query'];
 $routes = array("web/task1/"=>"/pages/web/task1/index.php",
