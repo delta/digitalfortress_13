@@ -4,9 +4,9 @@
 			$user="ctf";
 			$pass="Capture!!!";
 			$task1user="task1";
-			$task1password="task1pass";
+			$task1password="2STmfbwbZMLvdfuP";
 			$task4user="task4";
-			$task4password="";
+			$task4password="WVEJPWFus9waLxtH";
 			$user_table="users";
 			$score_table="scores";
 			$ans_table="ans";
