@@ -88,7 +88,7 @@ echo "Now try logging into the admin panel!!";
 
 
 <div id="content">
-   <?php if(isset($_REQUEST['pages']))include "requir/".$_REQUEST['pages'].".php"; else include "requir/home.php" ?>
+   <?php if(isset($_REQUEST['pages']))require_once "requir/".$_REQUEST['pages'].".php"; else require_once "requir/home.php" ?>
 </div>
 
 	</body>
