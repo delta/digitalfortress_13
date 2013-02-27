@@ -9,8 +9,9 @@
 
 // Remove the following code while deploying.
 
- 
-
+$testing=0;
+if(!$testing)
+{
 ini_set("use_cookies",1);
 ini_set("use_only_cookies",1);
 $cookie_path = "/";
@@ -22,18 +23,18 @@ ini_set("session.save_path", "/var/www/html/13/cms/uploads/sessions");
 ini_set('session.gc_probability', 1);
 session_set_cookie_params($cookie_timeout, $cookie_path);
 ini_set('session.gc_maxlifetime', $garbage_timeout);
-
+}
 include "configs.php";
-
-if(!isset($_SESSION['userId'])){
+$testing=0;
+if( !$testing && !isset($_SESSION['userId'])){
 	header("Location: http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login");
 }
 
 $pid=$_SESSION['userId'];
 
 $connection= mysql_connect("localhost",$user,$pass) or die(mysql_error());
-mysql_select_db("pragyan13_cms")  or die(mysql_error());
-$query = "SELECT * FROM `pragyan13_cms`.`pragyanV3_users` WHERE `user_id`='{$pid}' LIMIT 1";
+mysql_select_db("pragyan")  or die(mysql_error());
+$query = "SELECT * FROM `pragyan`.`pragyanV3_users` WHERE `user_id`='{$pid}' LIMIT 1";
 $result = mysql_query($query)  or die(mysql_error());
 
 if(mysql_num_rows($result)){
@@ -44,7 +45,7 @@ mysql_close($connection);
 
 $user_name = $res["user_fullname"];
 $handle = $res['user_name'];
-if(empty($user_name) || empty($handle)){
+if( $testing!=0 && (empty($user_name) || empty($handle) ) ){
 	header("Location: http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login");
 }
 $query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')" or die(mysql_error());

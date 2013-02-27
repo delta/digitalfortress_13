@@ -32,7 +32,7 @@ if( isset($_SESSION['task4loggedin']) && ($_SESSION['task4loggedin']==1))
 	       setcookie("manager",$_SESSION["cookie"]["manager"]);
 		    */
 }
-
+print_r($_SESSION);
 if(isset($_SESSION['task4loggedin']) && $_SESSION['task4loggedin']==0){
 	setcookie("username","",time()-36000);
 	setcookie("password","",time()-36000);

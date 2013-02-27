@@ -2,11 +2,13 @@
 if(isset($_REQUEST['submit'])){
   include "requir/config.php";
 	include "configs.php";
+	session_start();
 	$connection = mysql_connect($host,$task4user,$task4password) or die(mysql_error());
 	mysql_select_db($db) or die(mysql_error());
 	$user1 = mysql_real_escape_string($_REQUEST['user']);
 	$pass1 = mysql_real_escape_string($_REQUEST['password']);
 	$query = "SELECT * FROM `task4` WHERE `user`='$user1' AND `password`='$pass1' LIMIT 1";
+	echo $query;
 	$result = mysql_query($query) or die(mysql_error());
 	$row=mysql_fetch_assoc($result);
 	if(mysql_num_rows($result)){
