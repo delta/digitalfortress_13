@@ -9,7 +9,7 @@
 
 // Remove the following code while deploying.
 
-$testing=0;
+$testing=1;
 if(!$testing)
 {
 ini_set("use_cookies",1);
@@ -25,7 +25,7 @@ session_set_cookie_params($cookie_timeout, $cookie_path);
 ini_set('session.gc_maxlifetime', $garbage_timeout);
 }
 include "configs.php";
-$testing=0;
+$testing=1;
 if( !$testing && !isset($_SESSION['userId'])){
 	header("Location: http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login");
 }
