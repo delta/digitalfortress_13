@@ -45,7 +45,7 @@ mysql_close($connection);
 
 $user_name = $res["user_fullname"];
 $handle = $res['user_name'];
-if( $testing!=0 && (empty($user_name) || empty($handle) ) ){
+if( $testing!=1 && (empty($user_name) || empty($handle) ) ){
 	header("Location: http://www.pragyan.org/13/home/events/codeit/digital_fortress/+login");
 }
 $query="INSERt IGNORE INTO `users` VALUES('$user_name','$handle','$pid')" or die(mysql_error());
